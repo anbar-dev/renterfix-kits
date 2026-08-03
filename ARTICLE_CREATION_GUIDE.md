@@ -343,7 +343,6 @@ Good candidates from the roadmap:
 - `/kits/kitchen/tiny-counter-space/`
 - `/kits/kitchen/no-pantry-organization/`
 - `/kits/move-in/open-first-box/`
-- `/kits/small-space/entryway-no-closet/`
 - `/kits/daily-fixes/closet-smell-dampness/`
 - `/kits/move-out/cleaning-kit/`
 - `/kits/no-drill/cable-management/`

@@ -77,7 +77,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | published | Cleaning | First Apartment Cleaning Kit | `/kits/cleaning/first-apartment-cleaning-kit/` | first apartment cleaning supplies checklist; move in cleaning supplies apartment; basic cleaning supplies for first apartment |
 | published | Move-in | Basic Tool Kit for Apartment Renters | `/kits/move-in/basic-tool-kit/` | basic tool kit for apartment renters; tools every renter needs; first apartment tool kit |
 | next | Move-in | Open-First Box for Moving Day | `/kits/move-in/open-first-box/` | open first box checklist apartment; what to pack in first night box; moving day essentials apartment |
-| next | Small-space | Entryway Without a Closet Kit | `/kits/small-space/entryway-no-closet/` | apartment entryway no closet; no closet entryway storage; small apartment entryway storage renter friendly |
+| published | Small-space | Entryway Without a Closet Kit | `/kits/small-space/entryway-no-closet/` | apartment entryway no closet; no closet entryway storage; small apartment entryway storage renter friendly |
 | next | Kitchen | Tiny Kitchen Counter-Space Kit | `/kits/kitchen/tiny-counter-space/` | small apartment kitchen no counter space; tiny rental kitchen counter space; kitchen cart for small apartment |
 | next | No-drill | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
 | next | Daily fixes | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
@@ -136,7 +136,7 @@ These are the first pages to create because they are broad enough to monetize, s
 
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
-| next | Entryway Without a Closet Kit | `/kits/small-space/entryway-no-closet/` | apartment entryway no closet; no closet entryway storage; small apartment entryway storage renter friendly |
+| published | Entryway Without a Closet Kit | `/kits/small-space/entryway-no-closet/` | apartment entryway no closet; no closet entryway storage; small apartment entryway storage renter friendly |
 | planned | No-Closet Bedroom Storage Kit | `/kits/small-space/no-closet-bedroom-storage/` | bedroom no closet storage apartment; no closet bedroom ideas rental; freestanding wardrobe apartment |
 | planned | Under-Bed Storage Kit | `/kits/small-space/under-bed-storage/` | under bed storage for small apartment; renter under bed storage; small bedroom storage kit |
 | planned | Studio Apartment Storage Kit | `/kits/small-space/studio-storage-kit/` | studio apartment storage ideas; small studio apartment organization; storage kit for studio apartment |

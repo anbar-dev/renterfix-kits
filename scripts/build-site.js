@@ -77,7 +77,6 @@ const categories = [
     eyebrow: "Small-space",
     description: "No closet, no pantry, under-bed storage, studio layouts, tiny bathrooms, compact laundry, and cramped entryways.",
     planned: [
-      "Entryway without a closet",
       "No-closet bedroom storage",
       "Under-bed storage",
       "Studio apartment storage",
@@ -349,7 +348,7 @@ function renderKitsIndex() {
   return {
     urlPath: "/kits/",
     html: renderPage({
-      title: `Renter Kit Categories | ${site.name}`,
+      title: `Apartment Kit Categories | ${site.name}`,
       description: "Browse renter-friendly kit categories for move-in, kitchen, cleaning, no-drill fixes, small spaces, daily problems, and move-out.",
       urlPath: "/kits/",
       body
