@@ -7,7 +7,7 @@ const sourceDirs = [path.join(rootDir, "src", "pages"), path.join(rootDir, "src"
 const assetSource = path.join(rootDir, "assets");
 
 const site = {
-  name: "RenterFix Kits",
+  name: "Apartment Survival Kits",
   baseUrl: "https://apartmentsurvivalkits.com",
   customDomain: "apartmentsurvivalkits.com",
   analyticsId: "G-LKHYE9G1SS",
@@ -181,11 +181,10 @@ function renderHeader(root) {
   return `
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="${root}"><span class="brand-mark">R</span><span>${site.name}</span></a>
+      <a class="brand" href="${root}"><span class="brand-mark">A</span><span>${site.name}</span></a>
       <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">=</button>
       <div class="nav-links" data-nav-links>
         <a href="${root}kits/">Kits</a>
-        <a href="${root}guides/">Guides</a>
         <a href="${root}about/">About</a>
         <a href="${root}affiliate-disclosure/">Disclosure</a>
       </div>
@@ -254,6 +253,10 @@ function plannedList(items) {
   return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
 }
 
+function pageDisplayTitle(page) {
+  return page.meta.title.replace(` | ${site.name}`, "");
+}
+
 function renderKitCards(pages, currentPath) {
   if (!pages.length) {
     return `<div class="empty-state card">
@@ -267,7 +270,7 @@ ${pages.map((page) => {
     const href = relativeHref(currentPath, page.meta.path);
     return `<article class="card kit-card">
   <div class="pill-row"><span class="pill">${escapeHtml(page.meta.category || "Kit")}</span></div>
-  <h3>${escapeHtml(page.meta.title)}</h3>
+  <h3>${escapeHtml(pageDisplayTitle(page))}</h3>
   <p>${escapeHtml(page.meta.summary || page.meta.description)}</p>
   <a class="link" href="${href}">Open kit</a>
 </article>`;
@@ -340,12 +343,6 @@ function renderKitsIndex() {
     <section class="section">
       <div class="grid three">
         ${categories.map(categoryCard).join("\n")}
-        <article class="card kit-card">
-          <div class="pill-row"><span class="pill">Guides</span></div>
-          <h3>Guides</h3>
-          <p>Trust pages for comparisons, risk scoring, and what renters can skip before buying.</p>
-          <a class="link" href="../guides/">Open guides</a>
-        </article>
       </div>
     </section>`;
 
@@ -462,7 +459,9 @@ function build() {
   }
 
   outputs.push(renderKitsIndex());
-  outputs.push(renderGuidesIndex(pages));
+  if (pages.some((page) => page.meta.type === "guide")) {
+    outputs.push(renderGuidesIndex(pages));
+  }
   for (const category of categories) outputs.push(renderCategoryPage(category, pages));
 
   const paths = new Set();

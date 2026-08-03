@@ -1,4 +1,4 @@
-# RenterFix Kits
+# Apartment Survival Kits
 
 Static affiliate/editorial site for renter-friendly apartment kits.
 

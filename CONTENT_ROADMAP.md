@@ -1,4 +1,4 @@
-# RenterFix Kits Content Roadmap
+# Apartment Survival Kits Content Roadmap
 
 Working positioning:
 

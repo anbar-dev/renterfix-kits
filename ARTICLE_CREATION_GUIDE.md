@@ -1,6 +1,6 @@
 # Article Creation Guide
 
-This is the operating manual for creating new RenterFix Kits pages.
+This is the operating manual for creating new Apartment Survival Kits pages.
 
 If the chat history is unavailable, use this guide together with:
 
@@ -13,7 +13,7 @@ If the chat history is unavailable, use this guide together with:
 
 Brand:
 
-> RenterFix Kits
+> Apartment Survival Kits
 
 Core promise:
 
@@ -95,7 +95,7 @@ Every kit page source must start with metadata:
 
 ```html
 <!--
-title: Page Title | RenterFix Kits
+title: Page Title | Apartment Survival Kits
 description: Short SEO description.
 path: /kits/category-slug/page-slug/
 type: kit

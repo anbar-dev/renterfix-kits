@@ -1,5 +1,5 @@
 <!--
-title: Page Title | RenterFix Kits
+title: Page Title | Apartment Survival Kits
 description: Short SEO description for this kit page.
 path: /kits/category-slug/page-slug/
 type: kit
