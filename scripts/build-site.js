@@ -90,7 +90,6 @@ const categories = [
     eyebrow: "Daily fixes",
     description: "Recurring apartment annoyances: dark rooms, musty closets, noise, heat, cold, shower pressure, pests, and renter security.",
     planned: [
-      "Dark apartment lighting",
       "Noisy neighbor kit",
       "Room too hot",
       "Room too cold",

@@ -148,7 +148,7 @@ These are the first pages to create because they are broad enough to monetize, s
 
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
-| next | Dark Apartment Lighting | `/kits/daily-fixes/dark-apartment-lighting/` | apartment has no ceiling light what to buy; dark apartment lighting ideas; plug in lighting for apartment |
+| published | Dark Apartment Lighting | `/kits/daily-fixes/dark-apartment-lighting/` | apartment has no ceiling light what to buy; dark apartment lighting ideas; plug in lighting for apartment |
 | published | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
 | planned | Noisy Neighbor Kit | `/kits/daily-fixes/noisy-neighbor-kit/` | noisy neighbors apartment what to buy; reduce noise in apartment rental; soundproof apartment renter friendly |
 | planned | Room Too Hot Kit | `/kits/daily-fixes/room-too-hot-kit/` | apartment room too hot what to buy; cool down apartment bedroom; renter friendly cooling kit |

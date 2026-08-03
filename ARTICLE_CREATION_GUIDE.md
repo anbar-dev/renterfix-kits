@@ -335,6 +335,9 @@ Select-String -Path .\docs\sitemap.xml -Pattern 'page-slug'
 - `/kits/cleaning/first-apartment-cleaning-kit/`
 - `/kits/move-in/basic-tool-kit/`
 - `/kits/no-drill/no-drill-curtains/`
+- `/kits/small-space/entryway-no-closet/`
+- `/kits/daily-fixes/closet-smell-dampness/`
+- `/kits/daily-fixes/dark-apartment-lighting/`
 
 ## Recommended Next Pages
 
