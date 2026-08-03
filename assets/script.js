@@ -52,3 +52,20 @@ document.querySelectorAll('a[href*="amazon.com"]').forEach((link) => {
   link.rel = "sponsored nofollow noopener";
   link.target = "_blank";
 });
+
+document.querySelectorAll(".product-media img").forEach((image) => {
+  const showFallback = () => {
+    if (image.naturalWidth > 2 && image.naturalHeight > 2) return;
+    image.classList.add("is-missing");
+    const media = image.closest(".product-media");
+    if (!media || media.querySelector(".image-fallback")) return;
+    const fallback = document.createElement("span");
+    fallback.className = "image-fallback";
+    fallback.textContent = "Image unavailable";
+    media.appendChild(fallback);
+  };
+
+  if (image.complete) showFallback();
+  image.addEventListener("load", showFallback);
+  image.addEventListener("error", showFallback);
+});

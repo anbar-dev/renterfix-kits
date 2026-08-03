@@ -39,11 +39,13 @@ Use this tag in every Amazon product link:
 https://www.amazon.com/dp/ASIN/ref=nosim?tag=renter-20
 ```
 
-Use this format for product images unless a better verified image URL is chosen:
+Use a verified direct image URL from the Amazon product page:
 
 ```html
-https://images-na.ssl-images-amazon.com/images/P/ASIN.01._SCLZZZZZZZ_.jpg
+https://m.media-amazon.com/images/I/REAL_IMAGE_ID._AC_SL1500_.jpg
 ```
+
+Do not use the old `images-na.ssl-images-amazon.com/images/P/ASIN...` pattern. Some ASINs return a 1x1 white placeholder instead of the real product image.
 
 Product image cards should link to the Amazon product page:
 
@@ -190,7 +192,7 @@ Example:
 ```html
 <div class="product">
   <a class="product-media" href="https://www.amazon.com/dp/ASIN/ref=nosim?tag=renter-20" rel="sponsored nofollow noopener" target="_blank">
-    <img src="https://images-na.ssl-images-amazon.com/images/P/ASIN.01._SCLZZZZZZZ_.jpg" alt="Product name">
+    <img src="https://m.media-amazon.com/images/I/REAL_IMAGE_ID._AC_SL1500_.jpg" alt="Product name">
   </a>
   <div>
     <h3>Product name <span>for renter use case</span></h3>
@@ -280,9 +282,10 @@ Hero/category imagery:
 
 Product images:
 
-- Use Amazon image URL pattern by ASIN unless a product needs a different verified Amazon image URL.
+- Use a direct `m.media-amazon.com/images/I/...` URL verified from the current Amazon product page.
+- Avoid `images-na.ssl-images-amazon.com/images/P/ASIN...`; it can return a 1x1 white placeholder.
 - Do not download Amazon product images into the repository.
-- If an image does not display after publishing, verify the ASIN and try a direct `m.media-amazon.com/images/I/...` URL from the product page.
+- If an image does not display after publishing, verify both the product link and the image URL.
 
 ## Research Workflow
 
