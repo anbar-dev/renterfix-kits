@@ -1,0 +1,27 @@
+<!--
+title: Page Title | RenterFix Kits
+description: Short SEO description for this kit page.
+path: /kits/category-slug/page-slug/
+type: kit
+category: category-slug
+summary: One-sentence summary used on category cards.
+-->
+    <section class="page-hero">
+      <div class="page-title">
+        <p class="eyebrow">Category label</p>
+        <h1>Page headline.</h1>
+        <p>Short page intro focused on the renter problem.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="scoreboard">
+        <div class="score"><span>Deposit risk</span><strong>0/5</strong></div>
+        <div class="score"><span>Space cost</span><strong>Low</strong></div>
+        <div class="score"><span>Install effort</span><strong>None</strong></div>
+        <div class="score"><span>Buy priority</span><strong>Now</strong></div>
+      </div>
+      <div class="content-block">
+        <h2>The minimum kit</h2>
+        <p>Write the real recommendation here.</p>
+      </div>
+    </section>
