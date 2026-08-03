@@ -76,7 +76,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | published | Move-in | Minimum Kitchen Kit for First Apartment Renters | `/kits/kitchen/minimum-kitchen-kit/` | minimum kitchen essentials for first apartment; first apartment kitchen essentials for someone who barely cooks; what kitchen items do I need for first apartment |
 | published | Cleaning | First Apartment Cleaning Kit | `/kits/cleaning/first-apartment-cleaning-kit/` | first apartment cleaning supplies checklist; move in cleaning supplies apartment; basic cleaning supplies for first apartment |
 | published | Move-in | Basic Tool Kit for Apartment Renters | `/kits/move-in/basic-tool-kit/` | basic tool kit for apartment renters; tools every renter needs; first apartment tool kit |
-| next | Move-in | Open-First Box for Moving Day | `/kits/move-in/open-first-box/` | open first box checklist apartment; what to pack in first night box; moving day essentials apartment |
+| published | Move-in | Open-First Box for Moving Day | `/kits/move-in/open-first-box/` | open first box checklist apartment; what to pack in first night box; moving day essentials apartment |
 | published | Small-space | Entryway Without a Closet Kit | `/kits/small-space/entryway-no-closet/` | apartment entryway no closet; no closet entryway storage; small apartment entryway storage renter friendly |
 | next | Kitchen | Tiny Kitchen Counter-Space Kit | `/kits/kitchen/tiny-counter-space/` | small apartment kitchen no counter space; tiny rental kitchen counter space; kitchen cart for small apartment |
 | next | No-drill | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
@@ -92,7 +92,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | --- | --- | --- | --- |
 | planned | First Apartment Essentials, Minimal Version | `/kits/move-in/first-apartment-essentials-minimal/` | first apartment essentials checklist; first apartment essentials under budget; things you actually need for first apartment |
 | published | Basic Tool Kit for Apartment Renters | `/kits/move-in/basic-tool-kit/` | basic tool kit for apartment renters; tools every renter needs; first apartment tool kit |
-| next | Open-First Box for Moving Day | `/kits/move-in/open-first-box/` | open first box checklist apartment; moving day essentials apartment; first night in new apartment checklist |
+| published | Open-First Box for Moving Day | `/kits/move-in/open-first-box/` | open first box checklist apartment; moving day essentials apartment; first night in new apartment checklist |
 | planned | First Apartment Bathroom Kit | `/kits/move-in/bathroom-starter-kit/` | first apartment bathroom essentials; bathroom starter kit apartment; what to buy for first apartment bathroom |
 | planned | First Apartment Laundry Kit | `/kits/move-in/laundry-starter-kit/` | first apartment laundry essentials; apartment laundry supplies; laundry starter kit for renters |
 | planned | First Night Sleep Kit | `/kits/move-in/first-night-sleep-kit/` | first night in new apartment essentials; moving day sleep kit; what to unpack first apartment |

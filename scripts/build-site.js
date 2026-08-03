@@ -23,7 +23,6 @@ const categories = [
     planned: [
       "Minimum kitchen kit",
       "Basic tool kit",
-      "Open-first box",
       "Bathroom starter kit",
       "Laundry starter kit",
       "First-night sleep kit"
