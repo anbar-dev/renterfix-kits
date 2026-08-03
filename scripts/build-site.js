@@ -257,8 +257,8 @@ function plannedList(items) {
 function renderKitCards(pages, currentPath) {
   if (!pages.length) {
     return `<div class="empty-state card">
-  <h2>No full kit pages published yet.</h2>
-  <p>This category is ready for real pages. When a kit page is added under the matching source folder, it will appear here automatically.</p>
+  <h2>Kit pages coming soon.</h2>
+  <p>This category is being shaped around practical renter problems. Start with the planned topics below, or browse another category with finished kits.</p>
 </div>`;
   }
 
@@ -297,9 +297,9 @@ function renderCategoryPage(category, pages) {
     <section class="section">
       <div class="section-title">
         <div>
-          <p class="eyebrow">Published pages</p>
-          <h2>Built from the source folder.</h2>
-          <p>Full kit pages will appear here automatically after they are created and rebuilt.</p>
+          <p class="eyebrow">Available kits</p>
+          <h2>Start with a specific renter problem.</h2>
+          <p>Each finished kit keeps the list compact, calls out renter risk, and separates useful basics from things most people can skip.</p>
         </div>
       </div>
       ${renderKitCards(published, urlPath)}
@@ -308,9 +308,9 @@ function renderCategoryPage(category, pages) {
       <div class="section">
         <div class="section-title">
           <div>
-            <p class="eyebrow">Roadmap</p>
-            <h2>Planned topics.</h2>
-            <p>These are placeholders for future pages, not finished recommendations yet.</p>
+            <p class="eyebrow">Coming next</p>
+            <h2>More problems in this category.</h2>
+            <p>These are common renter situations worth solving with a compact, deposit-aware kit.</p>
           </div>
         </div>
         <div class="card roadmap-list"><ul>${plannedList(category.planned)}</ul></div>
@@ -367,7 +367,7 @@ function renderGuidesIndex(pages) {
       <div class="page-title">
         <p class="eyebrow">Guides</p>
         <h1>Trust pages and buying strategy.</h1>
-        <p>Comparison pages and buying guides will explain renter risk, what to skip, and how to avoid buying the wrong thing.</p>
+        <p>Comparison pages and buying guides for renter risk, what to skip, and how to avoid buying the wrong thing.</p>
       </div>
     </section>
     <section class="section">
@@ -377,8 +377,8 @@ function renderGuidesIndex(pages) {
       <div class="section">
         <div class="section-title">
           <div>
-            <p class="eyebrow">Roadmap</p>
-            <h2>Planned guides.</h2>
+            <p class="eyebrow">Coming next</p>
+            <h2>More buying guides.</h2>
           </div>
         </div>
         <div class="card roadmap-list"><ul>${plannedList(guidePlans)}</ul></div>
