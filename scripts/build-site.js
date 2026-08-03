@@ -9,6 +9,7 @@ const assetSource = path.join(rootDir, "assets");
 const site = {
   name: "RenterFix Kits",
   baseUrl: "https://apartmentsurvivalkits.com",
+  customDomain: "apartmentsurvivalkits.com",
   analyticsId: "G-LKHYE9G1SS",
   description: "Minimal, renter-safe kits for move-in, daily apartment problems, and move-out."
 };
@@ -473,6 +474,7 @@ function build() {
   copyDir(assetSource, path.join(outDir, "assets"));
   fs.writeFileSync(path.join(outDir, "sitemap.xml"), renderSitemap([...paths]), "utf8");
   fs.writeFileSync(path.join(outDir, "robots.txt"), renderRobots(), "utf8");
+  fs.writeFileSync(path.join(outDir, "CNAME"), `${site.customDomain}\n`, "utf8");
   fs.writeFileSync(path.join(outDir, ".nojekyll"), "", "utf8");
 
   console.log(`Built ${paths.size} pages into ${path.relative(rootDir, outDir)}`);
