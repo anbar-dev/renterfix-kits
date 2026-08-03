@@ -74,8 +74,8 @@ These are the first pages to create because they are broad enough to monetize, s
 | Status | Category | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- | --- |
 | published | Move-in | Minimum Kitchen Kit for First Apartment Renters | `/kits/kitchen/minimum-kitchen-kit/` | minimum kitchen essentials for first apartment; first apartment kitchen essentials for someone who barely cooks; what kitchen items do I need for first apartment |
-| next | Cleaning | First Apartment Cleaning Kit | `/kits/cleaning/first-apartment-cleaning-kit/` | first apartment cleaning supplies checklist; move in cleaning supplies apartment; basic cleaning supplies for first apartment |
-| next | Move-in | Basic Tool Kit for Apartment Renters | `/kits/move-in/basic-tool-kit/` | basic tool kit for apartment renters; tools every renter needs; first apartment tool kit |
+| published | Cleaning | First Apartment Cleaning Kit | `/kits/cleaning/first-apartment-cleaning-kit/` | first apartment cleaning supplies checklist; move in cleaning supplies apartment; basic cleaning supplies for first apartment |
+| published | Move-in | Basic Tool Kit for Apartment Renters | `/kits/move-in/basic-tool-kit/` | basic tool kit for apartment renters; tools every renter needs; first apartment tool kit |
 | next | Move-in | Open-First Box for Moving Day | `/kits/move-in/open-first-box/` | open first box checklist apartment; what to pack in first night box; moving day essentials apartment |
 | next | Small-space | Entryway Without a Closet Kit | `/kits/small-space/entryway-no-closet/` | apartment entryway no closet; no closet entryway storage; small apartment entryway storage renter friendly |
 | next | Kitchen | Tiny Kitchen Counter-Space Kit | `/kits/kitchen/tiny-counter-space/` | small apartment kitchen no counter space; tiny rental kitchen counter space; kitchen cart for small apartment |
@@ -91,7 +91,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
 | planned | First Apartment Essentials, Minimal Version | `/kits/move-in/first-apartment-essentials-minimal/` | first apartment essentials checklist; first apartment essentials under budget; things you actually need for first apartment |
-| next | Basic Tool Kit for Apartment Renters | `/kits/move-in/basic-tool-kit/` | basic tool kit for apartment renters; tools every renter needs; first apartment tool kit |
+| published | Basic Tool Kit for Apartment Renters | `/kits/move-in/basic-tool-kit/` | basic tool kit for apartment renters; tools every renter needs; first apartment tool kit |
 | next | Open-First Box for Moving Day | `/kits/move-in/open-first-box/` | open first box checklist apartment; moving day essentials apartment; first night in new apartment checklist |
 | planned | First Apartment Bathroom Kit | `/kits/move-in/bathroom-starter-kit/` | first apartment bathroom essentials; bathroom starter kit apartment; what to buy for first apartment bathroom |
 | planned | First Apartment Laundry Kit | `/kits/move-in/laundry-starter-kit/` | first apartment laundry essentials; apartment laundry supplies; laundry starter kit for renters |
@@ -113,7 +113,7 @@ These are the first pages to create because they are broad enough to monetize, s
 
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
-| next | First Apartment Cleaning Kit | `/kits/cleaning/first-apartment-cleaning-kit/` | first apartment cleaning supplies checklist; move in cleaning supplies apartment; basic cleaning supplies for first apartment |
+| published | First Apartment Cleaning Kit | `/kits/cleaning/first-apartment-cleaning-kit/` | first apartment cleaning supplies checklist; move in cleaning supplies apartment; basic cleaning supplies for first apartment |
 | planned | Move-In Deep Cleaning Kit | `/kits/cleaning/move-in-deep-cleaning-kit/` | move in deep cleaning supplies; clean apartment before moving in checklist; rental move in cleaning kit |
 | planned | Weekly Reset Cleaning Kit | `/kits/cleaning/weekly-reset-kit/` | weekly reset cleaning checklist; apartment cleaning reset supplies; cleaning list by room step by step |
 | planned | Bathroom Deep-Clean Kit for Renters | `/kits/cleaning/bathroom-deep-clean-kit/` | apartment bathroom deep cleaning supplies; rental bathroom cleaning kit; clean old apartment bathroom |
@@ -124,7 +124,7 @@ These are the first pages to create because they are broad enough to monetize, s
 
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
-| next | No-Drill Curtains for Renters | `/kits/no-drill/no-drill-curtains/` | how to hang curtains in rental without holes; no drill curtains apartment; tension rod curtains rental |
+| published | No-Drill Curtains for Renters | `/kits/no-drill/no-drill-curtains/` | how to hang curtains in rental without holes; no drill curtains apartment; tension rod curtains rental |
 | next | No-Drill Bathroom Storage | `/kits/no-drill/bathroom-storage/` | how to add storage to apartment bathroom without drilling; no drill bathroom storage rental; tiny rental bathroom storage |
 | next | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
 | next | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
