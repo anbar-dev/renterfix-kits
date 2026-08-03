@@ -332,6 +332,7 @@ Select-String -Path .\docs\sitemap.xml -Pattern 'page-slug'
 ## Current Published Kit Pages
 
 - `/kits/kitchen/minimum-kitchen-kit/`
+- `/kits/kitchen/no-pantry-organization/`
 - `/kits/cleaning/first-apartment-cleaning-kit/`
 - `/kits/move-in/basic-tool-kit/`
 - `/kits/no-drill/no-drill-curtains/`
@@ -344,7 +345,6 @@ Select-String -Path .\docs\sitemap.xml -Pattern 'page-slug'
 Good candidates from the roadmap:
 
 - `/kits/kitchen/tiny-counter-space/`
-- `/kits/kitchen/no-pantry-organization/`
 - `/kits/move-in/open-first-box/`
 - `/kits/move-out/cleaning-kit/`
 - `/kits/no-drill/cable-management/`

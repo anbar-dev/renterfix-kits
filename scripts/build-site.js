@@ -39,7 +39,6 @@ const categories = [
       "Barely-cook kitchen kit",
       "Cook-daily kitchen kit",
       "Tiny counter-space kit",
-      "No-pantry organization",
       "No-dishwasher survival kit"
     ]
   },

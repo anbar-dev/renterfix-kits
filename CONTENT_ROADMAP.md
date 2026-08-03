@@ -83,7 +83,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | published | Daily fixes | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
 | next | Move-out | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
 | next | No-drill | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
-| next | Kitchen | No-Pantry Kitchen Organization Kit | `/kits/kitchen/no-pantry-organization/` | apartment kitchen no pantry; small kitchen pantry alternatives; no pantry storage ideas apartment |
+| published | Kitchen | No-Pantry Kitchen Organization Kit | `/kits/kitchen/no-pantry-organization/` | apartment kitchen no pantry; small kitchen pantry alternatives; no pantry storage ideas apartment |
 | next | Daily fixes | Rental Door Security Without Drilling | `/kits/daily-fixes/door-security-no-drill/` | apartment door security without drilling; renter friendly door security; portable door lock apartment |
 
 ## Move-In Cluster
@@ -105,7 +105,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | planned | Kitchen Kit for Renters Who Barely Cook | `/kits/kitchen/barely-cook-kit/` | kitchen essentials for people who do not cook; first apartment kitchen basics no cooking; minimalist kitchen kit apartment |
 | planned | Kitchen Kit for Renters Who Cook Daily | `/kits/kitchen/cook-daily-kit/` | apartment kitchen essentials for cooking daily; small kitchen cooking essentials; first apartment cooking kit |
 | next | Tiny Kitchen Counter-Space Kit | `/kits/kitchen/tiny-counter-space/` | small apartment kitchen no counter space; tiny rental kitchen counter space; kitchen cart for small apartment |
-| next | No-Pantry Kitchen Organization Kit | `/kits/kitchen/no-pantry-organization/` | apartment kitchen no pantry; small kitchen pantry alternatives; no pantry storage ideas apartment |
+| published | No-Pantry Kitchen Organization Kit | `/kits/kitchen/no-pantry-organization/` | apartment kitchen no pantry; small kitchen pantry alternatives; no pantry storage ideas apartment |
 | planned | No-Dishwasher Kitchen Survival Kit | `/kits/kitchen/no-dishwasher-kit/` | apartment no dishwasher what to buy; dish drying rack small kitchen; no dishwasher apartment essentials |
 | planned | Rental Kitchen Upgrade Without Contact Paper | `/kits/kitchen/no-contact-paper-upgrade/` | renter friendly kitchen upgrade no contact paper; how to make rental kitchen look better no damage; peel and stick contact paper rental risk |
 
