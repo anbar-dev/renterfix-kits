@@ -80,7 +80,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | published | Small-space | Entryway Without a Closet Kit | `/kits/small-space/entryway-no-closet/` | apartment entryway no closet; no closet entryway storage; small apartment entryway storage renter friendly |
 | next | Kitchen | Tiny Kitchen Counter-Space Kit | `/kits/kitchen/tiny-counter-space/` | small apartment kitchen no counter space; tiny rental kitchen counter space; kitchen cart for small apartment |
 | next | No-drill | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
-| next | Daily fixes | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
+| published | Daily fixes | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
 | next | Move-out | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
 | next | No-drill | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
 | next | Kitchen | No-Pantry Kitchen Organization Kit | `/kits/kitchen/no-pantry-organization/` | apartment kitchen no pantry; small kitchen pantry alternatives; no pantry storage ideas apartment |
@@ -149,7 +149,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
 | next | Dark Apartment Lighting | `/kits/daily-fixes/dark-apartment-lighting/` | apartment has no ceiling light what to buy; dark apartment lighting ideas; plug in lighting for apartment |
-| next | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
+| published | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
 | planned | Noisy Neighbor Kit | `/kits/daily-fixes/noisy-neighbor-kit/` | noisy neighbors apartment what to buy; reduce noise in apartment rental; soundproof apartment renter friendly |
 | planned | Room Too Hot Kit | `/kits/daily-fixes/room-too-hot-kit/` | apartment room too hot what to buy; cool down apartment bedroom; renter friendly cooling kit |
 | planned | Room Too Cold Kit | `/kits/daily-fixes/room-too-cold-kit/` | apartment room too cold what to buy; renter friendly draft stopper; cold apartment bedroom kit |

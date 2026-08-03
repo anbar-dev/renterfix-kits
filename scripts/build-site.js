@@ -91,7 +91,6 @@ const categories = [
     description: "Recurring apartment annoyances: dark rooms, musty closets, noise, heat, cold, shower pressure, pests, and renter security.",
     planned: [
       "Dark apartment lighting",
-      "Closet smell and dampness",
       "Noisy neighbor kit",
       "Room too hot",
       "Room too cold",
