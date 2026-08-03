@@ -10,6 +10,7 @@ Static affiliate/editorial site for renter-friendly apartment kits.
 - `scripts/build-site.js` - tiny static generator.
 - `docs/` - generated site output for GitHub Pages.
 - `CONTENT_ROADMAP.md` - editorial roadmap and long-tail backlog.
+- `ARTICLE_CREATION_GUIDE.md` - rules and workflow for creating kit pages.
 
 ## Build
 

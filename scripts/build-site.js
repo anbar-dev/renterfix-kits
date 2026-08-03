@@ -8,7 +8,8 @@ const assetSource = path.join(rootDir, "assets");
 
 const site = {
   name: "RenterFix Kits",
-  baseUrl: "https://example.com",
+  baseUrl: "https://apartmentsurvivalkits.com",
+  analyticsId: "G-LKHYE9G1SS",
   description: "Minimal, renter-safe kits for move-in, daily apartment problems, and move-out."
 };
 
@@ -202,6 +203,18 @@ function renderFooter(root) {
   </footer>`;
 }
 
+function renderAnalytics() {
+  if (!site.analyticsId) return "";
+  return `  <script async src="https://www.googletagmanager.com/gtag/js?id=${site.analyticsId}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${site.analyticsId}');
+  </script>
+`;
+}
+
 function renderPage({ title, description, urlPath, body }) {
   const root = rootPrefix(urlPath);
   return `<!doctype html>
@@ -213,6 +226,7 @@ function renderPage({ title, description, urlPath, body }) {
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${canonicalUrl(urlPath)}">
   <link rel="stylesheet" href="${root}assets/style.css">
+${renderAnalytics().trimEnd()}
 </head>
 <body>
 ${renderHeader(root)}
