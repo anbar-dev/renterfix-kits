@@ -138,6 +138,7 @@ $Articles = @(
     Category = "Daily Fix"
     Board = "Renter-Friendly Fixes"
     Url = "$BaseUrl/kits/daily-fixes/dark-apartment-lighting/"
+    Keywords = "apartment lighting, renter friendly lighting, no ceiling light, dark apartment, rental apartment ideas"
     VideoHook = "Your apartment has no ceiling light? Do not buy five tiny lamps first."
     Pins = @(
       [pscustomobject]@{
@@ -171,6 +172,7 @@ $Articles = @(
     Category = "Kitchen"
     Board = "Small Kitchen Organization"
     Url = "$BaseUrl/kits/kitchen/no-pantry-organization/"
+    Keywords = "no pantry apartment, small kitchen organization, renter kitchen storage, pantry alternatives, apartment kitchen ideas"
     VideoHook = "No pantry in your apartment? Do not buy a giant container set first."
     Pins = @(
       [pscustomobject]@{
@@ -204,6 +206,7 @@ $Articles = @(
     Category = "Move-In"
     Board = "Moving Day Checklists"
     Url = "$BaseUrl/kits/move-in/open-first-box/"
+    Keywords = "moving day checklist, first apartment essentials, first night box, move in checklist, apartment moving tips"
     VideoHook = "The most useful moving box is the one you do not put in the moving pile."
     Pins = @(
       [pscustomobject]@{
@@ -237,7 +240,9 @@ $Articles = @(
 New-Dir $PromoRoot
 
 $CsvRows = New-Object System.Collections.Generic.List[string]
-$CsvRows.Add("Title,Media URL,Pinterest board,Description,Link")
+$CsvRows.Add("Title,Media URL,Pinterest board,Thumbnail,Description,Link,Publish date,Keywords")
+$ScheduleStart = (Get-Date).ToUniversalTime().Date.AddDays(1).AddHours(15)
+$ScheduleOffset = 0
 
 foreach ($Article in $Articles) {
   $ArticleDir = Join-Path $PromoRoot $Article.Slug
@@ -259,7 +264,8 @@ foreach ($Article in $Articles) {
     $OutPath = Join-Path $PinsDir $Pin.File
     Draw-Pin $Pin $Article $Index $OutPath
     $MediaUrl = "$BaseUrl/promo/$($Article.Slug)/pins/$($Pin.File)"
-    $CsvRows.Add(((Escape-Csv $Pin.Title), (Escape-Csv $MediaUrl), (Escape-Csv $Article.Board), (Escape-Csv $Pin.Description), (Escape-Csv $Article.Url) -join ","))
+    $PublishDate = $ScheduleStart.AddDays($ScheduleOffset).ToString("yyyy-MM-ddTHH:mm:ss", [Globalization.CultureInfo]::InvariantCulture)
+    $CsvRows.Add(((Escape-Csv $Pin.Title), (Escape-Csv $MediaUrl), (Escape-Csv $Article.Board), "", (Escape-Csv $Pin.Description), (Escape-Csv $Article.Url), (Escape-Csv $PublishDate), (Escape-Csv $Article.Keywords) -join ","))
     $CopyLines += @(
       "",
       "### $($Pin.File)",
@@ -268,9 +274,14 @@ foreach ($Article in $Articles) {
       "",
       "Description: $($Pin.Description)",
       "",
-      "Media URL after publishing: $MediaUrl"
+      "Media URL after publishing: $MediaUrl",
+      "",
+      "Scheduled publish date: $PublishDate UTC",
+      "",
+      "Keywords: $($Article.Keywords)"
     )
     $Index += 1
+    $ScheduleOffset += 1
   }
 
   Set-Content -Path (Join-Path $ArticleDir "pinterest-copy.md") -Value ($CopyLines -join "`r`n") -Encoding UTF8
