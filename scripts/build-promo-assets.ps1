@@ -240,7 +240,8 @@ $Articles = @(
 New-Dir $PromoRoot
 
 $CsvRows = New-Object System.Collections.Generic.List[string]
-$CsvRows.Add("Title,Media URL,Pinterest board,Thumbnail,Description,Link,Publish date,Keywords")
+$CsvHeader = "Title,Media URL,Pinterest board,Thumbnail,Description,Link,Publish date,Keywords"
+$CsvRows.Add($CsvHeader)
 $ScheduleStart = (Get-Date).ToUniversalTime().Date.AddDays(1).AddHours(15)
 $ScheduleOffset = 0
 
@@ -249,6 +250,8 @@ foreach ($Article in $Articles) {
   $PinsDir = Join-Path $ArticleDir "pins"
   New-Dir $ArticleDir
   New-Dir $PinsDir
+  $ArticleCsvRows = New-Object System.Collections.Generic.List[string]
+  $ArticleCsvRows.Add($CsvHeader)
 
   $CopyLines = @(
     "# Pinterest Copy - $($Article.Slug)",
@@ -265,7 +268,9 @@ foreach ($Article in $Articles) {
     Draw-Pin $Pin $Article $Index $OutPath
     $MediaUrl = "$BaseUrl/promo/$($Article.Slug)/pins/$($Pin.File)"
     $PublishDate = $ScheduleStart.AddDays($ScheduleOffset).ToString("yyyy-MM-ddTHH:mm:ss", [Globalization.CultureInfo]::InvariantCulture)
-    $CsvRows.Add(((Escape-Csv $Pin.Title), (Escape-Csv $MediaUrl), (Escape-Csv $Article.Board), "", (Escape-Csv $Pin.Description), (Escape-Csv $Article.Url), (Escape-Csv $PublishDate), (Escape-Csv $Article.Keywords) -join ","))
+    $CsvRow = ((Escape-Csv $Pin.Title), (Escape-Csv $MediaUrl), (Escape-Csv $Article.Board), "", (Escape-Csv $Pin.Description), (Escape-Csv $Article.Url), (Escape-Csv $PublishDate), (Escape-Csv $Article.Keywords) -join ",")
+    $CsvRows.Add($CsvRow)
+    $ArticleCsvRows.Add($CsvRow)
     $CopyLines += @(
       "",
       "### $($Pin.File)",
@@ -285,6 +290,7 @@ foreach ($Article in $Articles) {
   }
 
   Set-Content -Path (Join-Path $ArticleDir "pinterest-copy.md") -Value ($CopyLines -join "`r`n") -Encoding UTF8
+  Set-Content -Path (Join-Path $ArticleDir "pinterest-bulk-upload.csv") -Value ($ArticleCsvRows -join "`r`n") -Encoding UTF8
 
   $Video = @"
 # Short Video Script - $($Article.Slug)
