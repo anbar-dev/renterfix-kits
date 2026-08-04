@@ -15,7 +15,7 @@ Media URL after publishing: https://apartmentsurvivalkits.com/promo/entryway-no-
 
 Tracked destination URL: https://apartmentsurvivalkits.com/kits/small-space/entryway-no-closet/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=entryway-no-closet-pin-01
 
-Scheduled publish date:  UTC
+Scheduled publish date: 2026-08-17T15:00:00 UTC
 
 Keywords: apartment entryway no closet, small entryway storage, no closet entryway, renter friendly entryway, apartment shoe storage
 
@@ -29,7 +29,7 @@ Media URL after publishing: https://apartmentsurvivalkits.com/promo/entryway-no-
 
 Tracked destination URL: https://apartmentsurvivalkits.com/kits/small-space/entryway-no-closet/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=entryway-no-closet-pin-02
 
-Scheduled publish date:  UTC
+Scheduled publish date: 2026-08-18T15:00:00 UTC
 
 Keywords: apartment entryway no closet, small entryway storage, no closet entryway, renter friendly entryway, apartment shoe storage
 
@@ -43,6 +43,6 @@ Media URL after publishing: https://apartmentsurvivalkits.com/promo/entryway-no-
 
 Tracked destination URL: https://apartmentsurvivalkits.com/kits/small-space/entryway-no-closet/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=entryway-no-closet-pin-03
 
-Scheduled publish date:  UTC
+Scheduled publish date: 2026-08-19T15:00:00 UTC
 
 Keywords: apartment entryway no closet, small entryway storage, no closet entryway, renter friendly entryway, apartment shoe storage

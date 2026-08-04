@@ -15,7 +15,7 @@ Media URL after publishing: https://apartmentsurvivalkits.com/promo/closet-smell
 
 Tracked destination URL: https://apartmentsurvivalkits.com/kits/daily-fixes/closet-smell-dampness/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=closet-smell-dampness-pin-01
 
-Scheduled publish date:  UTC
+Scheduled publish date: 2026-08-20T15:00:00 UTC
 
 Keywords: musty closet smell, damp closet apartment, closet odor renter, apartment humidity, closet moisture absorber
 
@@ -29,7 +29,7 @@ Media URL after publishing: https://apartmentsurvivalkits.com/promo/closet-smell
 
 Tracked destination URL: https://apartmentsurvivalkits.com/kits/daily-fixes/closet-smell-dampness/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=closet-smell-dampness-pin-02
 
-Scheduled publish date:  UTC
+Scheduled publish date: 2026-08-21T15:00:00 UTC
 
 Keywords: musty closet smell, damp closet apartment, closet odor renter, apartment humidity, closet moisture absorber
 
@@ -43,6 +43,6 @@ Media URL after publishing: https://apartmentsurvivalkits.com/promo/closet-smell
 
 Tracked destination URL: https://apartmentsurvivalkits.com/kits/daily-fixes/closet-smell-dampness/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=closet-smell-dampness-pin-03
 
-Scheduled publish date:  UTC
+Scheduled publish date: 2026-08-22T15:00:00 UTC
 
 Keywords: musty closet smell, damp closet apartment, closet odor renter, apartment humidity, closet moisture absorber

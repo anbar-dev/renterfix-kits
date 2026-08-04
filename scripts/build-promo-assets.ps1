@@ -495,13 +495,39 @@ $SeedUploadedPins = @(
 
 $AllCsvRows = New-Object System.Collections.Generic.List[string]
 $NextCsvRows = New-Object System.Collections.Generic.List[string]
+$NowCsvRows = New-Object System.Collections.Generic.List[string]
+$ScheduledCsvRows = New-Object System.Collections.Generic.List[string]
 $LedgerRows = New-Object System.Collections.Generic.List[string]
 $AllCsvRows.Add($CsvHeader)
 $NextCsvRows.Add($CsvHeader)
+$NowCsvRows.Add($CsvHeader)
+$ScheduledCsvRows.Add($CsvHeader)
 $LedgerRows.Add($LedgerHeader)
 $ScheduleStart = (Get-Date).ToUniversalTime().Date.AddDays(1).AddHours(15)
 $ScheduleOffset = 0
 $NextUploadCount = 0
+$ImmediateUploadLimit = 9
+$ScheduledUploadOffset = 0
+$LatestKnownPublishDate = $null
+
+foreach ($Entry in $ExistingLedger.Values) {
+  if (@("uploaded", "published") -contains $Entry.status -and $Entry.publish_date) {
+    try {
+      $ParsedPublishDate = [datetime]::Parse($Entry.publish_date, [Globalization.CultureInfo]::InvariantCulture)
+      if (-not $LatestKnownPublishDate -or $ParsedPublishDate -gt $LatestKnownPublishDate) {
+        $LatestKnownPublishDate = $ParsedPublishDate
+      }
+    } catch {
+      # Ignore malformed legacy dates and fall back to the seed schedule.
+    }
+  }
+}
+
+if (-not $LatestKnownPublishDate) {
+  $LatestKnownPublishDate = $ScheduleStart.AddDays($SeedUploadedPins.Count - 1)
+}
+
+$ScheduledBatchStart = $LatestKnownPublishDate.Date.AddDays(1).AddHours($LatestKnownPublishDate.Hour).AddMinutes($LatestKnownPublishDate.Minute)
 
 foreach ($Article in $Articles) {
   $ArticleDir = Join-Path $PromoRoot $Article.Slug
@@ -549,12 +575,25 @@ foreach ($Article in $Articles) {
     $ShouldExportNext = @("ready", "exported", "error") -contains $Status
     if ($ShouldExportNext) {
       $Status = "exported"
-      if (-not $Notes) {
-        $Notes = "Included in pinterest-upload-next.csv; set status to uploaded after successful import."
+      $ExportPublishDate = ""
+      if ($NextUploadCount -ge $ImmediateUploadLimit) {
+        $ExportPublishDate = $ScheduledBatchStart.AddDays($ScheduledUploadOffset).ToString("yyyy-MM-ddTHH:mm:ss", [Globalization.CultureInfo]::InvariantCulture)
+        $ScheduledUploadOffset += 1
       }
-      $NextCsvRow = New-PinterestCsvRow $Pin.Title $MediaUrl $Article.Board $Pin.Description $TrackedUrl "" $Article.Keywords
+      $PublishDate = $ExportPublishDate
+      if ($ExportPublishDate) {
+        $Notes = "Included in pinterest-upload-scheduled.csv and pinterest-upload-next.csv; set status to uploaded after successful import."
+      } else {
+        $Notes = "Included in pinterest-upload-now.csv and pinterest-upload-next.csv; set status to uploaded after successful import."
+      }
+      $NextCsvRow = New-PinterestCsvRow $Pin.Title $MediaUrl $Article.Board $Pin.Description $TrackedUrl $ExportPublishDate $Article.Keywords
       $NextCsvRows.Add($NextCsvRow)
       $ArticleNextCsvRows.Add($NextCsvRow)
+      if ($ExportPublishDate) {
+        $ScheduledCsvRows.Add($NextCsvRow)
+      } else {
+        $NowCsvRows.Add($NextCsvRow)
+      }
       $NextUploadCount += 1
     }
 
@@ -658,6 +697,8 @@ I made a full checklist; it contains affiliate links.
 
 Set-Content -Path (Join-Path $PromoRoot "pinterest-bulk-upload.csv") -Value ($AllCsvRows -join "`r`n") -Encoding UTF8
 Set-Content -Path (Join-Path $PromoRoot "pinterest-upload-next.csv") -Value ($NextCsvRows -join "`r`n") -Encoding UTF8
+Set-Content -Path (Join-Path $PromoRoot "pinterest-upload-now.csv") -Value ($NowCsvRows -join "`r`n") -Encoding UTF8
+Set-Content -Path (Join-Path $PromoRoot "pinterest-upload-scheduled.csv") -Value ($ScheduledCsvRows -join "`r`n") -Encoding UTF8
 Set-Content -Path $LedgerPath -Value ($LedgerRows -join "`r`n") -Encoding UTF8
 
 Write-Host "Built promo assets for $($Articles.Count) articles into promo/ ($NextUploadCount rows in pinterest-upload-next.csv)"

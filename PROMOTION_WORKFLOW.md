@@ -21,6 +21,8 @@ Pins should link to the article page, not directly to Amazon. The article page c
 promo/
   PINTEREST_LEDGER.csv
   pinterest-upload-next.csv
+  pinterest-upload-now.csv
+  pinterest-upload-scheduled.csv
   pinterest-bulk-upload.csv
   article-slug/
     pins/
@@ -47,11 +49,18 @@ https://apartmentsurvivalkits.com/promo/dark-apartment-lighting/pins/pin-01.png
 
 Use a Pinterest business account. It is free unless ads are used.
 
-Upload this file for the next batch:
+For controlled uploads, use these files:
 
 ```text
-promo/pinterest-upload-next.csv
+promo/pinterest-upload-now.csv
+promo/pinterest-upload-scheduled.csv
 ```
+
+`pinterest-upload-now.csv` contains the first 9 pending pins with an empty `Publish date`, so Pinterest should publish them immediately.
+
+`pinterest-upload-scheduled.csv` contains the next 9 pending pins with dates after the already scheduled batch.
+
+`pinterest-upload-next.csv` is the combined view of both files. Use it only when uploading the full pending batch at once is intentional.
 
 `promo/pinterest-bulk-upload.csv` is the full generated archive. Do not upload it repeatedly, because it includes pins that may already be on Pinterest.
 
@@ -83,6 +92,14 @@ The generator excludes `uploaded`, `published`, and `hold` rows from `pinterest-
 Because Pinterest can reject duplicate destination links, every Pin variant uses a unique UTM-tagged article URL. The user still lands on the same article, but Pinterest and Analytics see a unique URL.
 
 If the Pinterest scheduler is already near its future-pin limit, leave `Publish date` blank in the next upload CSV so pins publish immediately, or upload smaller batches manually.
+
+Current handoff rule with the user:
+
+1. Codex generates promo files.
+2. User uploads `pinterest-upload-now.csv` or `pinterest-upload-scheduled.csv`.
+3. User tells Codex `uploaded ok` or pastes Pinterest errors.
+4. Codex updates `PINTEREST_LEDGER.csv`.
+5. Future CSV files exclude rows already marked `uploaded`, `published`, or `hold`.
 
 Recommended boards:
 

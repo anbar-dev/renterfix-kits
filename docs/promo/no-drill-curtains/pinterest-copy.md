@@ -15,7 +15,7 @@ Media URL after publishing: https://apartmentsurvivalkits.com/promo/no-drill-cur
 
 Tracked destination URL: https://apartmentsurvivalkits.com/kits/no-drill/no-drill-curtains/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=no-drill-curtains-pin-01
 
-Scheduled publish date:  UTC
+Scheduled publish date: 2026-08-14T15:00:00 UTC
 
 Keywords: no drill curtains, renter curtains, hang curtains without holes, apartment curtains no drilling, tension rod curtains
 
@@ -29,7 +29,7 @@ Media URL after publishing: https://apartmentsurvivalkits.com/promo/no-drill-cur
 
 Tracked destination URL: https://apartmentsurvivalkits.com/kits/no-drill/no-drill-curtains/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=no-drill-curtains-pin-02
 
-Scheduled publish date:  UTC
+Scheduled publish date: 2026-08-15T15:00:00 UTC
 
 Keywords: no drill curtains, renter curtains, hang curtains without holes, apartment curtains no drilling, tension rod curtains
 
@@ -43,6 +43,6 @@ Media URL after publishing: https://apartmentsurvivalkits.com/promo/no-drill-cur
 
 Tracked destination URL: https://apartmentsurvivalkits.com/kits/no-drill/no-drill-curtains/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=no-drill-curtains-pin-03
 
-Scheduled publish date:  UTC
+Scheduled publish date: 2026-08-16T15:00:00 UTC
 
 Keywords: no drill curtains, renter curtains, hang curtains without holes, apartment curtains no drilling, tension rod curtains
