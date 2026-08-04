@@ -17,6 +17,15 @@ function Escape-Csv($Value) {
   '"' + $Text.Replace('"', '""') + '"'
 }
 
+function Add-TrackingUrl($Url, $Slug, $PinFile) {
+  $Content = ($PinFile -replace '\.png$', '') -replace '[^a-zA-Z0-9_-]', '-'
+  $Separator = "?"
+  if ($Url.Contains("?")) {
+    $Separator = "&"
+  }
+  return "$Url$Separator" + "utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=$Slug-$Content"
+}
+
 function New-Brush($Hex) {
   $Color = [System.Drawing.ColorTranslator]::FromHtml($Hex)
   New-Object System.Drawing.SolidBrush($Color)
@@ -267,8 +276,9 @@ foreach ($Article in $Articles) {
     $OutPath = Join-Path $PinsDir $Pin.File
     Draw-Pin $Pin $Article $Index $OutPath
     $MediaUrl = "$BaseUrl/promo/$($Article.Slug)/pins/$($Pin.File)"
+    $TrackedUrl = Add-TrackingUrl $Article.Url $Article.Slug $Pin.File
     $PublishDate = $ScheduleStart.AddDays($ScheduleOffset).ToString("yyyy-MM-ddTHH:mm:ss", [Globalization.CultureInfo]::InvariantCulture)
-    $CsvRow = ((Escape-Csv $Pin.Title), (Escape-Csv $MediaUrl), (Escape-Csv $Article.Board), "", (Escape-Csv $Pin.Description), (Escape-Csv $Article.Url), (Escape-Csv $PublishDate), (Escape-Csv $Article.Keywords) -join ",")
+    $CsvRow = ((Escape-Csv $Pin.Title), (Escape-Csv $MediaUrl), (Escape-Csv $Article.Board), "", (Escape-Csv $Pin.Description), (Escape-Csv $TrackedUrl), (Escape-Csv $PublishDate), (Escape-Csv $Article.Keywords) -join ",")
     $CsvRows.Add($CsvRow)
     $ArticleCsvRows.Add($CsvRow)
     $CopyLines += @(
@@ -280,6 +290,8 @@ foreach ($Article in $Articles) {
       "Description: $($Pin.Description)",
       "",
       "Media URL after publishing: $MediaUrl",
+      "",
+      "Tracked destination URL: $TrackedUrl",
       "",
       "Scheduled publish date: $PublishDate UTC",
       "",

@@ -51,6 +51,12 @@ promo/pinterest-bulk-upload.csv
 
 The CSV points to public image URLs on the site. Push the site before uploading the CSV, otherwise Pinterest cannot fetch the media.
 
+Each Pin row needs a unique destination URL. When publishing multiple variants for the same article, use UTM parameters so Pinterest does not reject rows with `Duplicate Pin link`:
+
+```text
+?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=article-slug-pin-01
+```
+
 Recommended boards:
 
 - `Renter-Friendly Fixes`

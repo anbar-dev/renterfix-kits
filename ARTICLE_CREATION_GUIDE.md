@@ -383,6 +383,8 @@ Each promo pack should include:
 
 Pins should link to the article page, not directly to Amazon.
 
+Use unique UTM-tagged article URLs for multiple Pin variants of the same page, otherwise Pinterest may reject extra rows with `Duplicate Pin link`.
+
 GitHub Pages URL pattern:
 
 ```text

@@ -13,6 +13,8 @@ Description: A renter-friendly lighting kit for dark apartments with no ceiling 
 
 Media URL after publishing: https://apartmentsurvivalkits.com/promo/dark-apartment-lighting/pins/pin-01.png
 
+Tracked destination URL: https://apartmentsurvivalkits.com/kits/daily-fixes/dark-apartment-lighting/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=dark-apartment-lighting-pin-01
+
 Scheduled publish date: 2026-08-05T15:00:00 UTC
 
 Keywords: apartment lighting, renter friendly lighting, no ceiling light, dark apartment, rental apartment ideas
@@ -25,6 +27,8 @@ Description: Dark apartment lighting ideas for renters: floor lamps, plug-in pen
 
 Media URL after publishing: https://apartmentsurvivalkits.com/promo/dark-apartment-lighting/pins/pin-02.png
 
+Tracked destination URL: https://apartmentsurvivalkits.com/kits/daily-fixes/dark-apartment-lighting/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=dark-apartment-lighting-pin-02
+
 Scheduled publish date: 2026-08-06T15:00:00 UTC
 
 Keywords: apartment lighting, renter friendly lighting, no ceiling light, dark apartment, rental apartment ideas
@@ -36,6 +40,8 @@ Title: Stop Buying Tiny Lamps First
 Description: What to buy when an apartment has no ceiling light: a compact renter-friendly kit with product ideas and skip notes. #ad
 
 Media URL after publishing: https://apartmentsurvivalkits.com/promo/dark-apartment-lighting/pins/pin-03.png
+
+Tracked destination URL: https://apartmentsurvivalkits.com/kits/daily-fixes/dark-apartment-lighting/?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=dark-apartment-lighting-pin-03
 
 Scheduled publish date: 2026-08-07T15:00:00 UTC
 
