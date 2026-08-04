@@ -385,6 +385,8 @@ Pins should link to the article page, not directly to Amazon.
 
 Use unique UTM-tagged article URLs for multiple Pin variants of the same page, otherwise Pinterest may reject extra rows with `Duplicate Pin link`.
 
+Use `promo/PINTEREST_LEDGER.csv` as the durable memory for Pinterest status. After generating promotion assets, upload `promo/pinterest-upload-next.csv`, not the full archive CSV. When the user confirms a successful Pinterest import, update matching ledger rows from `exported` to `uploaded`.
+
 GitHub Pages URL pattern:
 
 ```text

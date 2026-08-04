@@ -19,12 +19,16 @@ Pins should link to the article page, not directly to Amazon. The article page c
 
 ```text
 promo/
+  PINTEREST_LEDGER.csv
+  pinterest-upload-next.csv
   pinterest-bulk-upload.csv
   article-slug/
     pins/
       pin-01.png
       pin-02.png
       pin-03.png
+    pinterest-upload-next.csv
+    pinterest-bulk-upload.csv
     pinterest-copy.md
     short-video-script.md
     fiverr-brief.md
@@ -43,11 +47,13 @@ https://apartmentsurvivalkits.com/promo/dark-apartment-lighting/pins/pin-01.png
 
 Use a Pinterest business account. It is free unless ads are used.
 
-Upload:
+Upload this file for the next batch:
 
 ```text
-promo/pinterest-bulk-upload.csv
+promo/pinterest-upload-next.csv
 ```
+
+`promo/pinterest-bulk-upload.csv` is the full generated archive. Do not upload it repeatedly, because it includes pins that may already be on Pinterest.
 
 The CSV points to public image URLs on the site. Push the site before uploading the CSV, otherwise Pinterest cannot fetch the media.
 
@@ -56,6 +62,27 @@ Each Pin row needs a unique destination URL. When publishing multiple variants f
 ```text
 ?utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=article-slug-pin-01
 ```
+
+## Pinterest Ledger
+
+`promo/PINTEREST_LEDGER.csv` is the memory file for Pinterest.
+
+Status values:
+
+- `ready`: generated but not exported yet.
+- `exported`: included in `pinterest-upload-next.csv`; waiting for manual upload confirmation.
+- `uploaded`: Pinterest accepted the pin.
+- `published`: pin is live and no longer only scheduled.
+- `error`: Pinterest rejected the row and it needs fixing.
+- `hold`: intentionally paused.
+
+When Pinterest accepts an upload, update the corresponding rows from `exported` to `uploaded`. If Pinterest returns errors, keep those rows as `error` or paste the error into chat so Codex can update the ledger.
+
+The generator excludes `uploaded`, `published`, and `hold` rows from `pinterest-upload-next.csv`. It keeps `ready`, `exported`, and `error` rows in the next upload file until they are confirmed or paused.
+
+Because Pinterest can reject duplicate destination links, every Pin variant uses a unique UTM-tagged article URL. The user still lands on the same article, but Pinterest and Analytics see a unique URL.
+
+If the Pinterest scheduler is already near its future-pin limit, leave `Publish date` blank in the next upload CSV so pins publish immediately, or upload smaller batches manually.
 
 Recommended boards:
 

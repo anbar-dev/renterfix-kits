@@ -26,6 +26,31 @@ function Add-TrackingUrl($Url, $Slug, $PinFile) {
   return "$Url$Separator" + "utm_source=pinterest&utm_medium=social&utm_campaign=bulk_promo&utm_content=$Slug-$Content"
 }
 
+function Get-PinKey($Slug, $PinFile) {
+  $Content = ($PinFile -replace '\.png$', '') -replace '[^a-zA-Z0-9_-]', '-'
+  return "$Slug/$Content"
+}
+
+function Get-LedgerMap($Path) {
+  $Map = @{}
+  if (Test-Path $Path) {
+    Import-Csv -Path $Path | ForEach-Object {
+      if ($_.pin_key) {
+        $Map[$_.pin_key] = $_
+      }
+    }
+  }
+  return $Map
+}
+
+function New-PinterestCsvRow($Title, $MediaUrl, $Board, $Description, $DestinationUrl, $PublishDate, $Keywords) {
+  return ((Escape-Csv $Title), (Escape-Csv $MediaUrl), (Escape-Csv $Board), "", (Escape-Csv $Description), (Escape-Csv $DestinationUrl), (Escape-Csv $PublishDate), (Escape-Csv $Keywords) -join ",")
+}
+
+function New-LedgerCsvRow($PinKey, $ArticleSlug, $PinFile, $Title, $Board, $MediaUrl, $DestinationUrl, $PublishDate, $Status, $PinterestUrl, $Notes) {
+  return ((Escape-Csv $PinKey), (Escape-Csv $ArticleSlug), (Escape-Csv $PinFile), (Escape-Csv $Title), (Escape-Csv $Board), (Escape-Csv $MediaUrl), (Escape-Csv $DestinationUrl), (Escape-Csv $PublishDate), (Escape-Csv $Status), (Escape-Csv $PinterestUrl), (Escape-Csv $Notes) -join ",")
+}
+
 function New-Brush($Hex) {
   $Color = [System.Drawing.ColorTranslator]::FromHtml($Hex)
   New-Object System.Drawing.SolidBrush($Color)
@@ -243,24 +268,250 @@ $Articles = @(
         Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
       }
     )
+  },
+  [pscustomobject]@{
+    Slug = "minimum-kitchen-kit"
+    Category = "Kitchen"
+    Board = "First Apartment Essentials"
+    Url = "$BaseUrl/kits/kitchen/minimum-kitchen-kit/"
+    Keywords = "minimum kitchen essentials, first apartment kitchen, apartment kitchen basics, small kitchen starter kit, renter kitchen checklist"
+    VideoHook = "First apartment kitchen? You do not need a full registry. You need the boring minimum kit first."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "First Apartment Kitchen Minimum Kit"
+        Subtitle = "Buy the few things that let you cook, reheat, clean, and store food before buying nice extras."
+        Bullets = @("Cook one real meal", "Clean up fast", "Skip duplicate gadgets")
+        Description = "A minimum kitchen essentials checklist for first apartment renters who want useful basics before extra gadgets. This page contains Amazon affiliate links. #ad"
+        Bg = "#7d947c"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Do Not Overbuy Your First Kitchen"
+        Subtitle = "Start with one pan, one pot, a knife, a board, basic utensils, and a cleanup system."
+        Bullets = @("Small-space friendly", "Beginner renter basics", "Useful from day one")
+        Description = "What kitchen items you actually need for a first apartment, with a simple minimum kit and skip notes. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Kitchen Basics If You Barely Cook"
+        Subtitle = "Enough to make breakfast, simple dinners, leftovers, and emergency meals without filling every cabinet."
+        Bullets = @("Fewer pieces", "Less wasted money", "Easy to move out")
+        Description = "Minimal first apartment kitchen essentials for renters who barely cook but still need a functional kitchen. #ad"
+        Bg = "#d87558"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#40543f"
+      }
+    )
+  },
+  [pscustomobject]@{
+    Slug = "first-apartment-cleaning-kit"
+    Category = "Cleaning"
+    Board = "Apartment Cleaning Checklists"
+    Url = "$BaseUrl/kits/cleaning/first-apartment-cleaning-kit/"
+    Keywords = "first apartment cleaning supplies, move in cleaning kit, apartment cleaning checklist, renter cleaning supplies, basic cleaning kit"
+    VideoHook = "Before you unpack everything, make the apartment clean enough to touch."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "First Apartment Cleaning Kit"
+        Subtitle = "The move-in cleaning basics to buy before boxes, furniture, and cabinet clutter get in the way."
+        Bullets = @("Clean surfaces first", "Bathroom before unpacking", "Skip specialty clutter")
+        Description = "First apartment cleaning supplies checklist for move-in day, basic resets, and renter-friendly cleaning priorities. This page contains Amazon affiliate links. #ad"
+        Bg = "#40543f"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Move-In Cleaning Supplies Checklist"
+        Subtitle = "A practical starter kit for counters, bathroom grime, floors, trash, gloves, and paper towels."
+        Bullets = @("Before you unpack", "Small apartment basics", "No huge product shelf")
+        Description = "Move-in cleaning supplies for apartment renters: simple products to clean the place before settling in. #ad"
+        Bg = "#efb857"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#466a86"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Clean Before You Set Up"
+        Subtitle = "If you wait until after furniture arrives, the annoying corners become much harder to reach."
+        Bullets = @("Gloves and scrubbers", "Trash bags ready", "Bathroom first")
+        Description = "Basic cleaning kit for a first apartment, with move-in priorities and what not to overbuy. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      }
+    )
+  },
+  [pscustomobject]@{
+    Slug = "basic-tool-kit"
+    Category = "Move-In"
+    Board = "First Apartment Essentials"
+    Url = "$BaseUrl/kits/move-in/basic-tool-kit/"
+    Keywords = "basic tool kit apartment, tools every renter needs, first apartment tools, renter tool kit, move in tools"
+    VideoHook = "A renter tool kit is not a garage. It is the small set that saves you from borrowing everything."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "Basic Tool Kit for Apartment Renters"
+        Subtitle = "The small set of tools that handles assembly, hanging, tightening, measuring, and move-in fixes."
+        Bullets = @("No garage needed", "Handles flat-pack furniture", "Useful on moving day")
+        Description = "Basic tool kit checklist for apartment renters and first apartment move-in tasks. This page contains Amazon affiliate links. #ad"
+        Bg = "#d87558"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#40543f"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Tools Every Renter Actually Needs"
+        Subtitle = "Start with a screwdriver set, tape measure, level, utility knife, pliers, and a few simple helpers."
+        Bullets = @("Assembly basics", "Damage-aware fixes", "Easy to store")
+        Description = "Tools every renter needs for an apartment, without buying a bulky homeowner kit. #ad"
+        Bg = "#40543f"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Do Not Move In Without These Tools"
+        Subtitle = "Boxes, furniture, curtains, labels, batteries, and loose screws all show up in the first week."
+        Bullets = @("Tape measure first", "Utility knife ready", "Small toolkit only")
+        Description = "First apartment tools checklist for renters who need the basics without overbuying. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      }
+    )
+  },
+  [pscustomobject]@{
+    Slug = "no-drill-curtains"
+    Category = "No-Drill"
+    Board = "No-Drill Apartment Ideas"
+    Url = "$BaseUrl/kits/no-drill/no-drill-curtains/"
+    Keywords = "no drill curtains, renter curtains, hang curtains without holes, apartment curtains no drilling, tension rod curtains"
+    VideoHook = "Need curtains in a rental? Start with the window type, not the prettiest curtain rod."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "No-Drill Curtains for Renters"
+        Subtitle = "Choose tension, twist-and-fit, magnetic, or adhesive options based on the window and deposit risk."
+        Bullets = @("No holes", "Measure first", "Deposit-aware")
+        Description = "How to hang curtains in a rental without holes, with no-drill curtain options and what to skip. This page contains Amazon affiliate links. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Hang Curtains Without Drilling"
+        Subtitle = "A renter-friendly curtain kit for privacy, sleep, and ugly blinds without permanent hardware."
+        Bullets = @("Tension rod options", "Temporary privacy", "No wall anchors")
+        Description = "No-drill curtain ideas for apartments, including tension rods and renter-safe window cover options. #ad"
+        Bg = "#7d947c"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Rental Curtains Without Losing Deposit"
+        Subtitle = "The safest setup depends on surface, window depth, curtain weight, and move-out cleanup."
+        Bullets = @("Avoid heavy rods", "Test adhesive carefully", "Keep hardware light")
+        Description = "Renter-friendly curtain setup checklist for apartments where drilling is not allowed. #ad"
+        Bg = "#efb857"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#40543f"
+      }
+    )
+  },
+  [pscustomobject]@{
+    Slug = "entryway-no-closet"
+    Category = "Small Space"
+    Board = "Small Apartment Storage"
+    Url = "$BaseUrl/kits/small-space/entryway-no-closet/"
+    Keywords = "apartment entryway no closet, small entryway storage, no closet entryway, renter friendly entryway, apartment shoe storage"
+    VideoHook = "No entry closet? Your front door needs a landing zone, not a pile."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "Entryway With No Closet?"
+        Subtitle = "Create a tiny landing zone for shoes, keys, bags, coats, mail, and daily clutter."
+        Bullets = @("Shoes contained", "Keys visible", "No drilling needed")
+        Description = "Apartment entryway no closet kit with renter-friendly storage ideas for shoes, coats, keys, and bags. This page contains Amazon affiliate links. #ad"
+        Bg = "#40543f"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Small Apartment Entryway Fix"
+        Subtitle = "A compact setup for renters who walk into the living room and have nowhere to drop daily stuff."
+        Bullets = @("Narrow storage", "Freestanding hooks", "Less floor clutter")
+        Description = "Small apartment entryway storage ideas for rentals without an entry closet or mudroom. #ad"
+        Bg = "#d87558"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#466a86"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Stop the Doorway Pile"
+        Subtitle = "Give every daily item a home within arm's reach before the entry becomes a mess."
+        Bullets = @("Landing tray", "Shoe zone", "Bag hook alternative")
+        Description = "No-closet entryway storage kit for renters who need a cleaner apartment entrance. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      }
+    )
+  },
+  [pscustomobject]@{
+    Slug = "closet-smell-dampness"
+    Category = "Daily Fix"
+    Board = "Renter-Friendly Fixes"
+    Url = "$BaseUrl/kits/daily-fixes/closet-smell-dampness/"
+    Keywords = "musty closet smell, damp closet apartment, closet odor renter, apartment humidity, closet moisture absorber"
+    VideoHook = "A musty closet usually needs airflow, moisture control, and a boring cleanup before fragrance."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "Closet Smells Musty?"
+        Subtitle = "Start with moisture control and airflow before trying to cover the smell with scent."
+        Bullets = @("Find damp zones", "Add airflow", "Skip heavy fragrance")
+        Description = "Closet smell and dampness kit for apartment renters dealing with musty closets and moisture. This page contains Amazon affiliate links. #ad"
+        Bg = "#7d947c"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#466a86"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Damp Closet in an Apartment"
+        Subtitle = "A renter-safe kit for moisture absorbers, odor checks, airflow, and storage changes."
+        Bullets = @("Moisture first", "Air gaps matter", "Protect clothes")
+        Description = "How to fix a damp closet in a rental apartment with simple moisture and airflow basics. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Do Not Just Add Scent"
+        Subtitle = "If the closet is damp, fragrance can hide the problem while clothes keep absorbing the smell."
+        Bullets = @("Check humidity", "Separate fabrics", "Clean then absorb")
+        Description = "Musty closet smell checklist for renters: what to buy, what to skip, and how to reduce dampness. #ad"
+        Bg = "#efb857"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#40543f"
+      }
+    )
   }
 )
 
 New-Dir $PromoRoot
 
-$CsvRows = New-Object System.Collections.Generic.List[string]
 $CsvHeader = "Title,Media URL,Pinterest board,Thumbnail,Description,Link,Publish date,Keywords"
-$CsvRows.Add($CsvHeader)
+$LedgerHeader = "pin_key,article_slug,pin_file,title,board,media_url,destination_url,publish_date,status,pinterest_url,notes"
+$LedgerPath = Join-Path $PromoRoot "PINTEREST_LEDGER.csv"
+$ExistingLedger = Get-LedgerMap $LedgerPath
+$SeedUploadedPins = @(
+  "dark-apartment-lighting/pin-01",
+  "dark-apartment-lighting/pin-02",
+  "dark-apartment-lighting/pin-03",
+  "no-pantry-organization/pin-01",
+  "no-pantry-organization/pin-02",
+  "no-pantry-organization/pin-03",
+  "open-first-box/pin-01",
+  "open-first-box/pin-02",
+  "open-first-box/pin-03"
+)
+
+$AllCsvRows = New-Object System.Collections.Generic.List[string]
+$NextCsvRows = New-Object System.Collections.Generic.List[string]
+$LedgerRows = New-Object System.Collections.Generic.List[string]
+$AllCsvRows.Add($CsvHeader)
+$NextCsvRows.Add($CsvHeader)
+$LedgerRows.Add($LedgerHeader)
 $ScheduleStart = (Get-Date).ToUniversalTime().Date.AddDays(1).AddHours(15)
 $ScheduleOffset = 0
+$NextUploadCount = 0
 
 foreach ($Article in $Articles) {
   $ArticleDir = Join-Path $PromoRoot $Article.Slug
   $PinsDir = Join-Path $ArticleDir "pins"
   New-Dir $ArticleDir
   New-Dir $PinsDir
-  $ArticleCsvRows = New-Object System.Collections.Generic.List[string]
-  $ArticleCsvRows.Add($CsvHeader)
+  $ArticleAllCsvRows = New-Object System.Collections.Generic.List[string]
+  $ArticleNextCsvRows = New-Object System.Collections.Generic.List[string]
+  $ArticleAllCsvRows.Add($CsvHeader)
+  $ArticleNextCsvRows.Add($CsvHeader)
 
   $CopyLines = @(
     "# Pinterest Copy - $($Article.Slug)",
@@ -275,12 +526,42 @@ foreach ($Article in $Articles) {
   foreach ($Pin in $Article.Pins) {
     $OutPath = Join-Path $PinsDir $Pin.File
     Draw-Pin $Pin $Article $Index $OutPath
+    $PinKey = Get-PinKey $Article.Slug $Pin.File
     $MediaUrl = "$BaseUrl/promo/$($Article.Slug)/pins/$($Pin.File)"
     $TrackedUrl = Add-TrackingUrl $Article.Url $Article.Slug $Pin.File
-    $PublishDate = $ScheduleStart.AddDays($ScheduleOffset).ToString("yyyy-MM-ddTHH:mm:ss", [Globalization.CultureInfo]::InvariantCulture)
-    $CsvRow = ((Escape-Csv $Pin.Title), (Escape-Csv $MediaUrl), (Escape-Csv $Article.Board), "", (Escape-Csv $Pin.Description), (Escape-Csv $TrackedUrl), (Escape-Csv $PublishDate), (Escape-Csv $Article.Keywords) -join ",")
-    $CsvRows.Add($CsvRow)
-    $ArticleCsvRows.Add($CsvRow)
+    $Existing = $ExistingLedger[$PinKey]
+    $PublishDate = ""
+    $Status = "ready"
+    $PinterestUrl = ""
+    $Notes = ""
+
+    if ($Existing) {
+      $PublishDate = $Existing.publish_date
+      $Status = $Existing.status
+      $PinterestUrl = $Existing.pinterest_url
+      $Notes = $Existing.notes
+    } elseif ($SeedUploadedPins -contains $PinKey) {
+      $PublishDate = $ScheduleStart.AddDays($ScheduleOffset).ToString("yyyy-MM-ddTHH:mm:ss", [Globalization.CultureInfo]::InvariantCulture)
+      $Status = "uploaded"
+      $Notes = "Confirmed uploaded in the first Pinterest bulk import."
+    }
+
+    $ShouldExportNext = @("ready", "exported", "error") -contains $Status
+    if ($ShouldExportNext) {
+      $Status = "exported"
+      if (-not $Notes) {
+        $Notes = "Included in pinterest-upload-next.csv; set status to uploaded after successful import."
+      }
+      $NextCsvRow = New-PinterestCsvRow $Pin.Title $MediaUrl $Article.Board $Pin.Description $TrackedUrl "" $Article.Keywords
+      $NextCsvRows.Add($NextCsvRow)
+      $ArticleNextCsvRows.Add($NextCsvRow)
+      $NextUploadCount += 1
+    }
+
+    $CsvRow = New-PinterestCsvRow $Pin.Title $MediaUrl $Article.Board $Pin.Description $TrackedUrl $PublishDate $Article.Keywords
+    $AllCsvRows.Add($CsvRow)
+    $ArticleAllCsvRows.Add($CsvRow)
+    $LedgerRows.Add((New-LedgerCsvRow $PinKey $Article.Slug $Pin.File $Pin.Title $Article.Board $MediaUrl $TrackedUrl $PublishDate $Status $PinterestUrl $Notes))
     $CopyLines += @(
       "",
       "### $($Pin.File)",
@@ -302,7 +583,8 @@ foreach ($Article in $Articles) {
   }
 
   Set-Content -Path (Join-Path $ArticleDir "pinterest-copy.md") -Value ($CopyLines -join "`r`n") -Encoding UTF8
-  Set-Content -Path (Join-Path $ArticleDir "pinterest-bulk-upload.csv") -Value ($ArticleCsvRows -join "`r`n") -Encoding UTF8
+  Set-Content -Path (Join-Path $ArticleDir "pinterest-bulk-upload.csv") -Value ($ArticleAllCsvRows -join "`r`n") -Encoding UTF8
+  Set-Content -Path (Join-Path $ArticleDir "pinterest-upload-next.csv") -Value ($ArticleNextCsvRows -join "`r`n") -Encoding UTF8
 
   $Video = @"
 # Short Video Script - $($Article.Slug)
@@ -374,6 +656,8 @@ I made a full checklist; it contains affiliate links.
   Set-Content -Path (Join-Path $ArticleDir "reddit-angle.md") -Value $Reddit -Encoding UTF8
 }
 
-Set-Content -Path (Join-Path $PromoRoot "pinterest-bulk-upload.csv") -Value ($CsvRows -join "`r`n") -Encoding UTF8
+Set-Content -Path (Join-Path $PromoRoot "pinterest-bulk-upload.csv") -Value ($AllCsvRows -join "`r`n") -Encoding UTF8
+Set-Content -Path (Join-Path $PromoRoot "pinterest-upload-next.csv") -Value ($NextCsvRows -join "`r`n") -Encoding UTF8
+Set-Content -Path $LedgerPath -Value ($LedgerRows -join "`r`n") -Encoding UTF8
 
-Write-Host "Built promo assets for $($Articles.Count) articles into promo/"
+Write-Host "Built promo assets for $($Articles.Count) articles into promo/ ($NextUploadCount rows in pinterest-upload-next.csv)"
