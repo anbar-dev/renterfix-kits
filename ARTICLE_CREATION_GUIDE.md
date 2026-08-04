@@ -51,7 +51,7 @@ Product image cards should link to the Amazon product page:
 
 ```html
 <a class="product-media" href="https://www.amazon.com/dp/ASIN/ref=nosim?tag=renter-20" rel="sponsored nofollow noopener" target="_blank">
-  <img src="https://images-na.ssl-images-amazon.com/images/P/ASIN.01._SCLZZZZZZZ_.jpg" alt="Product name">
+  <img src="https://m.media-amazon.com/images/I/REAL_IMAGE_ID._AC_SL1500_.jpg" alt="Product name">
 </a>
 ```
 
@@ -362,6 +362,26 @@ git add .
 git commit -m "Add descriptive page name"
 git push
 ```
+
+## Promotion Workflow
+
+After publishing a strong page, generate a promo pack:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-promo-assets.ps1
+```
+
+Promo packs live in `promo/` and are copied into `docs/promo/` by the static site build.
+
+Each promo pack should include:
+
+- 3 Pinterest-ready vertical PNGs.
+- Pinterest copy and CSV rows.
+- Short video script.
+- Fiverr brief.
+- Reddit angle for manual non-spam replies.
+
+Pins should link to the article page, not directly to Amazon.
 
 GitHub Pages URL pattern:
 

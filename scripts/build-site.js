@@ -5,6 +5,7 @@ const rootDir = path.resolve(__dirname, "..");
 const outDir = path.join(rootDir, "docs");
 const sourceDirs = [path.join(rootDir, "src", "pages"), path.join(rootDir, "src", "kits")];
 const assetSource = path.join(rootDir, "assets");
+const promoSource = path.join(rootDir, "promo");
 
 const site = {
   name: "Apartment Survival Kits",
@@ -466,6 +467,7 @@ function build() {
   }
 
   copyDir(assetSource, path.join(outDir, "assets"));
+  copyDir(promoSource, path.join(outDir, "promo"));
   fs.writeFileSync(path.join(outDir, "sitemap.xml"), renderSitemap([...paths]), "utf8");
   fs.writeFileSync(path.join(outDir, "robots.txt"), renderRobots(), "utf8");
   fs.writeFileSync(path.join(outDir, "CNAME"), `${site.customDomain}\n`, "utf8");
