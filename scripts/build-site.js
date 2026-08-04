@@ -221,6 +221,9 @@ function renderPage({ title, description, urlPath, body }) {
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${canonicalUrl(urlPath)}">
+  <link rel="icon" type="image/png" sizes="32x32" href="${root}assets/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="${root}assets/brand/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="${root}assets/brand/favicon-512.png">
   <link rel="stylesheet" href="${root}assets/style.css">
 ${renderAnalytics().trimEnd()}
 </head>
