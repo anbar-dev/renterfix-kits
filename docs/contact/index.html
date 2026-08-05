@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Request a Kit | Apartment Survival Kits</title>
-  <meta name="description" content="Request a renter-friendly apartment kit topic for Apartment Survival Kits.">
+  <title>Contact | Apartment Survival Kits</title>
+  <meta name="description" content="Contact Apartment Survival Kits or request a future renter-friendly apartment kit topic.">
   <link rel="canonical" href="https://apartmentsurvivalkits.com/contact/">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/brand/favicon-192.png">
@@ -22,11 +22,12 @@
 
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="../"><span class="brand-mark">A</span><span>Apartment Survival Kits</span></a>
+      <a class="brand" href="../"><img class="brand-logo" src="../assets/brand/favicon-192.png" alt="" width="34" height="34"><span>Apartment Survival Kits</span></a>
       <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">=</button>
       <div class="nav-links" data-nav-links>
         <a href="../kits/">Kits</a>
         <a href="../about/">About</a>
+        <a href="../contact/">Contact</a>
         <a href="../affiliate-disclosure/">Disclosure</a>
       </div>
     </nav>
@@ -34,21 +35,54 @@
   <main>
 <section class="page-hero">
       <div class="page-title">
-        <p class="eyebrow">Requests</p>
+        <p class="eyebrow">Contact</p>
         <h1>Request a renter problem.</h1>
-        <p>Have a renter problem that needs a compact shopping kit? Send the topic, the apartment constraint, and what you are trying to avoid buying.</p>
+        <p>Have an apartment constraint that needs a compact kit? The form below is a placeholder for now: it does not send anything or store anything yet.</p>
       </div>
     </section>
     <section class="section">
-      <div class="content-block">
-        <h2>Good kit requests</h2>
-        <ul>
-          <li>Minimum kitchen kit for first apartment renters.</li>
-          <li>First apartment cleaning kit.</li>
-          <li>Basic tool kit for apartment renters.</li>
-          <li>Entryway without a closet.</li>
-          <li>Tiny kitchen counter-space kit.</li>
-        </ul>
+      <div class="contact-layout">
+        <form class="contact-form card" data-static-form>
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="topic">Renter problem</label>
+            <select id="topic" name="topic">
+              <option>No pantry or tiny kitchen</option>
+              <option>No drilling allowed</option>
+              <option>Move-in essentials</option>
+              <option>Move-out or deposit risk</option>
+              <option>Storage or small-space issue</option>
+              <option>Other apartment annoyance</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">What should the kit solve?</label>
+            <textarea id="message" name="message" rows="7" placeholder="Example: My rental bathroom has no storage and I cannot drill into tile."></textarea>
+          </div>
+          <button class="button" type="submit">Preview request</button>
+          <p class="form-note" data-form-message hidden>This placeholder form is not connected yet, so nothing was sent.</p>
+        </form>
+        <aside class="contact-aside">
+          <div class="content-block">
+            <h2>Good kit requests</h2>
+            <ul>
+              <li>A concrete apartment problem.</li>
+              <li>A clear constraint, such as no drilling, no closet, tiny counter, bad light, or move-out deadline.</li>
+              <li>What you are trying not to overbuy.</li>
+            </ul>
+          </div>
+          <div class="callout">
+            <h3>For now</h3>
+            <p>This page is here to make the site feel complete while the request system is still manual. Future versions can connect the form to email, a spreadsheet, or a simple backend.</p>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
@@ -57,7 +91,7 @@
     <div class="footer-inner">
       <span>Apartment Survival Kits</span>
       <span>As an Amazon Associate, this site earns from qualifying purchases.</span>
-      <span><a href="../privacy/">Privacy</a> | <a href="../affiliate-disclosure/">Affiliate disclosure</a></span>
+      <span><a href="../contact/">Contact</a> | <a href="../privacy/">Privacy</a> | <a href="../affiliate-disclosure/">Affiliate disclosure</a></span>
     </div>
   </footer>
   <script src="../assets/script.js"></script>

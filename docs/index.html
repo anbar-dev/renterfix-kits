@@ -22,11 +22,12 @@
 
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href=""><span class="brand-mark">A</span><span>Apartment Survival Kits</span></a>
+      <a class="brand" href=""><img class="brand-logo" src="assets/brand/favicon-192.png" alt="" width="34" height="34"><span>Apartment Survival Kits</span></a>
       <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">=</button>
       <div class="nav-links" data-nav-links>
         <a href="kits/">Kits</a>
         <a href="about/">About</a>
+        <a href="contact/">Contact</a>
         <a href="affiliate-disclosure/">Disclosure</a>
       </div>
     </nav>
@@ -35,6 +36,10 @@
 <section class="hero">
       <img src="assets/images/apartment-survival-hero.png" alt="A tidy rental apartment entryway with renter-safe storage, lighting, and bathroom organization">
       <div class="hero-inner">
+        <div class="hero-logo">
+          <img src="assets/brand/favicon-192.png" alt="" width="44" height="44">
+          <span>Apartment Survival Kits</span>
+        </div>
         <p class="eyebrow">Renter-friendly apartment kits</p>
         <h1>Buy only what your rental actually needs.</h1>
         <p class="hero-copy">A practical catalog of minimal kits for move-in, small kitchens, no-drill fixes, daily apartment annoyances, and move-out deposit prep. Each kit focuses on what to buy, what to skip, and what could put your security deposit at risk.</p>
@@ -42,6 +47,53 @@
           <a class="button secondary" href="#categories">Browse categories</a>
           <a class="button" href="kits/">View all kits</a>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="trust-strip">
+        <div>
+          <strong>Minimal kit logic</strong>
+          <span>Small sets before big shopping lists.</span>
+        </div>
+        <div>
+          <strong>Renter-safe bias</strong>
+          <span>No-drill and move-out friction matter.</span>
+        </div>
+        <div>
+          <strong>Skip notes</strong>
+          <span>Every good kit says what not to buy.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Start here</p>
+          <h2>Popular apartment problems.</h2>
+          <p>These kits are built around moments when renters usually overbuy, improvise badly, or discover the apartment has one annoying constraint too late.</p>
+        </div>
+      </div>
+      <div class="grid three">
+        <article class="card feature-card">
+          <span class="feature-number">01</span>
+          <h3>No ceiling light?</h3>
+          <p>Fix a dark room with a compact lighting stack before buying a pile of weak accent lamps.</p>
+          <a class="link" href="kits/daily-fixes/dark-apartment-lighting/">Open kit</a>
+        </article>
+        <article class="card feature-card">
+          <span class="feature-number">02</span>
+          <h3>No pantry?</h3>
+          <p>Build pantry behavior inside cabinets, door space, bins, and one measured overflow zone.</p>
+          <a class="link" href="kits/kitchen/no-pantry-organization/">Open kit</a>
+        </article>
+        <article class="card feature-card">
+          <span class="feature-number">03</span>
+          <h3>Moving soon?</h3>
+          <p>Pack the first box you open before everything useful disappears into the moving pile.</p>
+          <a class="link" href="kits/move-in/open-first-box/">Open kit</a>
+        </article>
       </div>
     </section>
 
@@ -93,6 +145,28 @@
       </div>
     </section>
 
+    <section class="section compact">
+      <div class="finder card">
+        <div class="finder-panel">
+          <p class="eyebrow">Quick picker</p>
+          <h2>What problem are you trying to solve?</h2>
+          <p>Pick the closest constraint and jump into the right part of the site.</p>
+          <div class="choice-grid" aria-label="Apartment problem choices">
+            <button class="choice active" type="button" data-choice="storage"><strong>No storage</strong><span>Closets, entryways, kitchens, bathrooms.</span></button>
+            <button class="choice" type="button" data-choice="lighting"><strong>Bad lighting</strong><span>No ceiling fixture or gloomy rooms.</span></button>
+            <button class="choice" type="button" data-choice="privacy"><strong>No drilling</strong><span>Curtains, walls, hooks, cable fixes.</span></button>
+            <button class="choice" type="button" data-choice="moveout"><strong>Move-out risk</strong><span>Cleaning, residue, wall repair, deposits.</span></button>
+          </div>
+        </div>
+        <div class="result-box">
+          <p class="eyebrow">Suggested path</p>
+          <h2 data-result-title>Start with the small-space category.</h2>
+          <p data-result-copy>The strongest pages here cover no-closet entryways, tiny bathrooms, under-bed storage, and small kitchens.</p>
+          <a class="button secondary" data-result-link href="kits/small-space/">Open suggested category</a>
+        </div>
+      </div>
+    </section>
+
     <section class="band">
       <div class="section">
         <div class="section-title">
@@ -102,6 +176,24 @@
             <p>The goal is to keep each kit compact: a few useful picks, clear renter-risk notes, and simple reasons to skip products that look helpful but usually create clutter or move-out problems.</p>
           </div>
         </div>
+        <div class="grid three">
+          <article class="content-block">
+            <h3>Start with the constraint</h3>
+            <p>Each page begins with the apartment problem: no pantry, no closet, no ceiling light, no drilling, or a move-out deadline.</p>
+          </article>
+          <article class="content-block">
+            <h3>Buy the minimum first</h3>
+            <p>The kit format favors the smallest useful setup before optional upgrades, bulky organizers, or style-only products.</p>
+          </article>
+          <article class="content-block">
+            <h3>Protect the deposit</h3>
+            <p>Renter-safe does not always mean damage-free, so install effort and cleanup risk are part of the recommendation.</p>
+          </article>
+        </div>
+        <div class="actions">
+          <a class="button" href="about/">How the site works</a>
+          <a class="button light" href="contact/">Request a kit</a>
+        </div>
       </div>
     </section>
   </main>
@@ -110,7 +202,7 @@
     <div class="footer-inner">
       <span>Apartment Survival Kits</span>
       <span>As an Amazon Associate, this site earns from qualifying purchases.</span>
-      <span><a href="privacy/">Privacy</a> | <a href="affiliate-disclosure/">Affiliate disclosure</a></span>
+      <span><a href="contact/">Contact</a> | <a href="privacy/">Privacy</a> | <a href="affiliate-disclosure/">Affiliate disclosure</a></span>
     </div>
   </footer>
   <script src="assets/script.js"></script>

@@ -177,11 +177,12 @@ function renderHeader(root) {
   return `
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="${root}"><span class="brand-mark">A</span><span>${site.name}</span></a>
+      <a class="brand" href="${root}"><img class="brand-logo" src="${root}assets/brand/favicon-192.png" alt="" width="34" height="34"><span>${site.name}</span></a>
       <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">=</button>
       <div class="nav-links" data-nav-links>
         <a href="${root}kits/">Kits</a>
         <a href="${root}about/">About</a>
+        <a href="${root}contact/">Contact</a>
         <a href="${root}affiliate-disclosure/">Disclosure</a>
       </div>
     </nav>
@@ -194,7 +195,7 @@ function renderFooter(root) {
     <div class="footer-inner">
       <span>${site.name}</span>
       <span>As an Amazon Associate, this site earns from qualifying purchases.</span>
-      <span><a href="${root}privacy/">Privacy</a> | <a href="${root}affiliate-disclosure/">Affiliate disclosure</a></span>
+      <span><a href="${root}contact/">Contact</a> | <a href="${root}privacy/">Privacy</a> | <a href="${root}affiliate-disclosure/">Affiliate disclosure</a></span>
     </div>
   </footer>`;
 }

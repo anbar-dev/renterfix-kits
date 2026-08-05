@@ -69,3 +69,11 @@ document.querySelectorAll(".product-media img").forEach((image) => {
   image.addEventListener("load", showFallback);
   image.addEventListener("error", showFallback);
 });
+
+document.querySelectorAll("[data-static-form]").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const message = form.querySelector("[data-form-message]");
+    if (message) message.hidden = false;
+  });
+});

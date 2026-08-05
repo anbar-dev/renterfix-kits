@@ -1,4 +1,6 @@
 {
+  "name": "apartment-survival-kits",
+  "private": true,
   "scripts": {
     "build": "node scripts/build-site.js"
   }

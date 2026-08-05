@@ -62,6 +62,13 @@ img {
   text-decoration: none;
 }
 
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  flex: 0 0 auto;
+}
+
 .brand-mark {
   width: 34px;
   height: 34px;
@@ -109,7 +116,7 @@ img {
   background: #1f251d;
 }
 
-.hero img {
+.hero > img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -131,6 +138,26 @@ img {
   margin: 0 auto;
   padding: 86px 0 76px;
   color: #fff;
+}
+
+.hero-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-bottom: 18px;
+  padding: 6px 12px 6px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 8px;
+  background: rgba(251, 250, 246, 0.12);
+  color: #fff;
+  font-weight: 800;
+}
+
+.hero-logo img {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
 }
 
 .eyebrow {
@@ -207,6 +234,35 @@ h1 {
 
 .section.compact {
   padding-top: 38px;
+}
+
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(54, 45, 35, 0.06);
+}
+
+.trust-strip div {
+  padding: 18px 20px;
+  border-right: 1px solid var(--line);
+}
+
+.trust-strip div:last-child {
+  border-right: 0;
+}
+
+.trust-strip strong,
+.trust-strip span {
+  display: block;
+}
+
+.trust-strip span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 .section-title {
@@ -293,6 +349,41 @@ h1 {
 .kit-card .link:hover {
   background: var(--ink);
   border-color: var(--ink);
+}
+
+.feature-card {
+  min-height: 250px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-number {
+  color: var(--coral);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.feature-card h3 {
+  margin: 12px 0 8px;
+  font-size: 25px;
+  line-height: 1.08;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.feature-card .link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 38px;
+  margin-top: auto;
+  color: var(--sage-dark);
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .pill-row {
@@ -449,6 +540,70 @@ h1 {
 .content-block ul,
 .content-block ol {
   color: var(--muted);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-form input,
+.contact-form select {
+  min-height: 44px;
+  padding: 0 12px;
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 3px solid rgba(125, 148, 124, 0.24);
+  border-color: var(--sage-dark);
+}
+
+.form-note {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #fff7e6;
+  color: #59411a;
+  font-weight: 700;
+}
+
+.contact-aside {
+  display: grid;
+  gap: 18px;
 }
 
 .product-list {
@@ -720,6 +875,8 @@ h1 {
 
   .grid.three,
   .grid.two,
+  .trust-strip,
+  .contact-layout,
   .finder,
   .kit-layout,
   .scoreboard,
@@ -738,11 +895,26 @@ h1 {
   .sidebar {
     position: static;
   }
+
+  .trust-strip div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .trust-strip div:last-child {
+    border-bottom: 0;
+  }
 }
 
 @media (max-width: 520px) {
   .nav {
     padding-inline: 14px;
+  }
+
+  .brand span {
+    max-width: 218px;
+    overflow-wrap: anywhere;
+    line-height: 1.05;
   }
 
   .hero-inner,
