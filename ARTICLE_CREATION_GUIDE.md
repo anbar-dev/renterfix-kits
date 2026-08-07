@@ -336,6 +336,7 @@ Select-String -Path .\docs\sitemap.xml -Pattern 'page-slug'
 
 - `/kits/kitchen/minimum-kitchen-kit/`
 - `/kits/kitchen/no-pantry-organization/`
+- `/kits/kitchen/tiny-counter-space/`
 - `/kits/cleaning/first-apartment-cleaning-kit/`
 - `/kits/move-in/basic-tool-kit/`
 - `/kits/move-in/open-first-box/`
@@ -348,7 +349,6 @@ Select-String -Path .\docs\sitemap.xml -Pattern 'page-slug'
 
 Good candidates from the roadmap:
 
-- `/kits/kitchen/tiny-counter-space/`
 - `/kits/move-out/cleaning-kit/`
 - `/kits/no-drill/cable-management/`
 - `/kits/daily-fixes/door-security-no-drill/`

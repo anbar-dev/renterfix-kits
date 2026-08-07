@@ -78,8 +78,8 @@ These are the first pages to create because they are broad enough to monetize, s
 | published | Move-in | Basic Tool Kit for Apartment Renters | `/kits/move-in/basic-tool-kit/` | basic tool kit for apartment renters; tools every renter needs; first apartment tool kit |
 | published | Move-in | Open-First Box for Moving Day | `/kits/move-in/open-first-box/` | open first box checklist apartment; what to pack in first night box; moving day essentials apartment |
 | published | Small-space | Entryway Without a Closet Kit | `/kits/small-space/entryway-no-closet/` | apartment entryway no closet; no closet entryway storage; small apartment entryway storage renter friendly |
-| next | Kitchen | Tiny Kitchen Counter-Space Kit | `/kits/kitchen/tiny-counter-space/` | small apartment kitchen no counter space; tiny rental kitchen counter space; kitchen cart for small apartment |
-| next | No-drill | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
+| published | Kitchen | Tiny Kitchen Counter-Space Kit | `/kits/kitchen/tiny-counter-space/` | small apartment kitchen no counter space; tiny rental kitchen counter space; kitchen cart for small apartment |
+| published | No-drill | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
 | published | Daily fixes | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
 | next | Move-out | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
 | next | No-drill | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |

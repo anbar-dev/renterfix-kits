@@ -236,6 +236,40 @@ $Articles = @(
     )
   },
   [pscustomobject]@{
+    Slug = "cable-management"
+    Category = "No-Drill"
+    Board = "No-Drill Apartment Ideas"
+    Url = "$BaseUrl/kits/no-drill/cable-management/"
+    Keywords = "cable management renters, hide cords apartment, no drill cable management, renter friendly cable raceway, apartment cord organization"
+    VideoHook = "Cable mess in a rental? Route the cord first, then choose the lightest holder that keeps it out of the walkway."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "Cable Management for Renters"
+        Subtitle = "A no-drill setup for desks, TVs, lamps, and chargers without turning your walls into a project."
+        Bullets = @("Route before sticking", "Use light clips", "Test hidden surfaces")
+        Description = "Cable management for renters: no-drill raceways, adhesive clips, routing ideas, and what can damage apartment walls. This page contains Amazon affiliate links. #ad"
+        Bg = "#40543f"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Hide Cords Without Drilling"
+        Subtitle = "Use existing furniture routes first, then add a short channel or clip only where the cable needs support."
+        Bullets = @("No wall holes", "Measure first", "Keep cables accessible")
+        Description = "How to hide cords in an apartment without drilling, with renter-friendly cable raceways, clips, and risk notes. #ad"
+        Bg = "#d87558"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#466a86"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Do Not Stick a Raceway Everywhere"
+        Subtitle = "Adhesive cable management can still pull paint, so choose the smallest fix and test the surface first."
+        Bullets = @("Skip textured walls", "Avoid heavy bundles", "Plan move-out removal")
+        Description = "Renter-friendly cable management checklist: what to buy, what to skip, and how to reduce deposit risk. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      }
+    )
+  },
+  [pscustomobject]@{
     Slug = "open-first-box"
     Category = "Move-In"
     Board = "Moving Day Checklists"
