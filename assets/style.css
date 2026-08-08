@@ -330,6 +330,15 @@ h1 {
   color: var(--muted);
 }
 
+.kit-count {
+  display: block;
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
 .kit-card .link {
   display: inline-flex;
   align-items: center;

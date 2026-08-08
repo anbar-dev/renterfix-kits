@@ -123,6 +123,21 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
+function publishedKitCount(pages, categorySlug) {
+  return pages.filter((page) => page.meta.type === "kit" && page.meta.category === categorySlug).length;
+}
+
+function kitCountLabel(pages, categorySlug) {
+  const count = publishedKitCount(pages, categorySlug);
+  return `${count} ${count === 1 ? "kit" : "kits"}`;
+}
+
+function replaceKitCountTokens(body, pages) {
+  return body.replace(/\{\{KIT_COUNT:([a-z0-9-]+)\}\}/g, (_token, categorySlug) => {
+    return escapeHtml(kitCountLabel(pages, categorySlug));
+  });
+}
+
 function walkFiles(dir) {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
@@ -238,11 +253,12 @@ ${renderFooter(root)}
 `;
 }
 
-function categoryCard(category) {
+function categoryCard(category, pages) {
   return `<article class="card kit-card">
   <div class="pill-row"><span class="pill">${escapeHtml(category.eyebrow)}</span></div>
   <h3>${escapeHtml(category.title)}</h3>
   <p>${escapeHtml(category.description)}</p>
+  <span class="kit-count">${kitCountLabel(pages, category.slug)}</span>
   <a class="link" href="${category.slug}/">Open category</a>
 </article>`;
 }
@@ -338,7 +354,7 @@ function renderCategoryPage(category, pages) {
   };
 }
 
-function renderKitsIndex() {
+function renderKitsIndex(pages) {
   const body = `
     <section class="page-hero">
       <div class="page-title">
@@ -357,7 +373,7 @@ function renderKitsIndex() {
         </div>
       </div>
       <div class="grid three">
-        ${categories.map(categoryCard).join("\n")}
+        ${categories.map((category) => categoryCard(category, pages)).join("\n")}
       </div>
     </section>`;
 
@@ -476,12 +492,12 @@ function build() {
         title: page.meta.title,
         description: page.meta.description,
         urlPath: page.meta.path,
-        body: page.body
+        body: replaceKitCountTokens(page.body, pages)
       })
     });
   }
 
-  outputs.push(renderKitsIndex());
+  outputs.push(renderKitsIndex(pages));
   if (pages.some((page) => page.meta.type === "guide")) {
     outputs.push(renderGuidesIndex(pages));
   }
