@@ -174,7 +174,7 @@ These pages may not monetize as directly, but they build trust and internal link
 
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
-| planned | Things First Apartment Renters Can Skip | `/guides/first-apartment-things-to-skip/` | things you do not need for first apartment; first apartment essentials not worth buying; first apartment overbuying |
+| published | Things First Apartment Renters Can Skip | `/guides/first-apartment-things-to-skip/` | things you do not need for first apartment; first apartment essentials not worth buying; first apartment overbuying |
 | planned | Command Strips vs Tension Rods vs Freestanding Storage | `/guides/command-strips-vs-tension-rods/` | command strips damage apartment walls; tension rod vs command strips; renter friendly mounting options |
 | planned | How Deposit Risk Scores Work | `/guides/deposit-risk-score/` | renter friendly damage risk; deposit safe apartment products; how to avoid losing security deposit |
 | planned | Renter-Friendly Does Not Always Mean Damage-Free | `/guides/renter-friendly-not-damage-free/` | renter friendly products damage walls; peel and stick rental damage; adhesive shelves rental risk |

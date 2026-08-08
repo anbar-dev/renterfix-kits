@@ -112,11 +112,9 @@ const categories = [
 ];
 
 const guidePlans = [
-  "Things first apartment renters can skip",
   "Command strips vs tension rods",
   "How deposit risk scores work",
   "Renter-friendly is not damage-free",
-  "Minimal first apartment buying strategy"
 ];
 
 function escapeHtml(value) {
@@ -265,14 +263,16 @@ function renderKitCards(pages, currentPath) {
 </div>`;
   }
 
-  return `<div class="grid three">
+return `<div class="grid three">
 ${pages.map((page) => {
     const href = relativeHref(currentPath, page.meta.path);
+    const label = page.meta.type === "guide" ? "Guide" : (page.meta.category || "Kit");
+    const linkLabel = page.meta.type === "guide" ? "Open guide" : "Open kit";
     return `<article class="card kit-card">
-  <div class="pill-row"><span class="pill">${escapeHtml(page.meta.category || "Kit")}</span></div>
+  <div class="pill-row"><span class="pill">${escapeHtml(label)}</span></div>
   <h3>${escapeHtml(pageDisplayTitle(page))}</h3>
   <p>${escapeHtml(page.meta.summary || page.meta.description)}</p>
-  <a class="link" href="${href}">Open kit</a>
+  <a class="link" href="${href}">${linkLabel}</a>
 </article>`;
   }).join("\n")}
 </div>`;
