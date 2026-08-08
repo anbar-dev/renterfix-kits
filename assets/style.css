@@ -332,8 +332,8 @@ h1 {
 
 .kit-count {
   display: block;
-  margin: 0 0 10px;
-  color: var(--muted);
+  margin: 12px 0 10px;
+  color: #8a8f8b;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: .02em;
