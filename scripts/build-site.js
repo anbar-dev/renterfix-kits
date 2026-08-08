@@ -112,7 +112,6 @@ const categories = [
 ];
 
 const guidePlans = [
-  "How deposit risk scores work",
   "Renter-friendly is not damage-free",
 ];
 
