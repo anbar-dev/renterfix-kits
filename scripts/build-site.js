@@ -112,7 +112,6 @@ const categories = [
 ];
 
 const guidePlans = [
-  "Command strips vs tension rods",
   "How deposit risk scores work",
   "Renter-friendly is not damage-free",
 ];
