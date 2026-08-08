@@ -178,7 +178,7 @@ These pages may not monetize as directly, but they build trust and internal link
 | planned | Command Strips vs Tension Rods vs Freestanding Storage | `/guides/command-strips-vs-tension-rods/` | command strips damage apartment walls; tension rod vs command strips; renter friendly mounting options |
 | planned | How Deposit Risk Scores Work | `/guides/deposit-risk-score/` | renter friendly damage risk; deposit safe apartment products; how to avoid losing security deposit |
 | planned | Renter-Friendly Does Not Always Mean Damage-Free | `/guides/renter-friendly-not-damage-free/` | renter friendly products damage walls; peel and stick rental damage; adhesive shelves rental risk |
-| planned | Minimal First Apartment Buying Strategy | `/guides/minimal-first-apartment-buying-strategy/` | what to buy first apartment first; first apartment essentials priority; first apartment budget buying guide |
+| published | Minimal First Apartment Buying Strategy | `/guides/minimal-first-apartment-buying-strategy/` | what to buy first apartment first; first apartment essentials priority; first apartment budget buying guide |
 
 ## Content Selection Rules
 
