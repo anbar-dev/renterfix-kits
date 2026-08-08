@@ -176,7 +176,9 @@ function renderHeader(root) {
       <a class="brand" href="${root}"><img class="brand-logo" src="${root}assets/brand/favicon-192.png" alt="" width="34" height="34"><span>${site.name}</span></a>
       <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">=</button>
       <div class="nav-links" data-nav-links>
+        <a href="${root}">Home</a>
         <a href="${root}kits/">Kits</a>
+        <a href="${root}guides/">Guides</a>
         <a href="${root}about/">About</a>
         <a href="${root}contact/">Contact</a>
         <a href="${root}affiliate-disclosure/">Disclosure</a>
@@ -191,7 +193,7 @@ function renderFooter(root) {
     <div class="footer-inner">
       <span>${site.name}</span>
       <span>As an Amazon Associate, this site earns from qualifying purchases.</span>
-      <span><a href="${root}contact/">Contact</a> | <a href="${root}privacy/">Privacy</a> | <a href="${root}affiliate-disclosure/">Affiliate disclosure</a></span>
+      <span><a href="${root}">Home</a> | <a href="${root}kits/">Kits</a> | <a href="${root}guides/">Guides</a> | <a href="${root}contact/">Contact</a> | <a href="${root}privacy/">Privacy</a> | <a href="${root}affiliate-disclosure/">Affiliate disclosure</a></span>
     </div>
   </footer>`;
 }
@@ -304,6 +306,13 @@ function renderCategoryPage(category, pages) {
         </div>
       </div>
       ${renderKitCards(published, urlPath)}
+      <div class="callout">
+        <h3>Need buying strategy?</h3>
+        <p>Kits solve a specific apartment problem. Guides explain the decisions behind the products: what to skip, how to compare options, and how to think about renter risk.</p>
+        <div class="internal-links">
+          <a href="${relativeHref(urlPath, "/guides/")}">Browse renter guides</a>
+        </div>
+      </div>
     </section>
     <section class="band">
       <div class="section">
@@ -339,6 +348,14 @@ function renderKitsIndex() {
       </div>
     </section>
     <section class="section">
+      <div class="callout">
+        <h2>How to use the library</h2>
+        <p><strong>Kits</strong> are practical pages for one apartment problem, such as a dark room, no pantry, or move-in day. <strong>Guides</strong> help you choose between approaches, understand renter risk, and decide what to skip before you buy.</p>
+        <div class="internal-links">
+          <a href="${relativeHref("/kits/", "/guides/")}">Browse guides</a>
+          <a href="${relativeHref("/kits/", "/")}">Return home</a>
+        </div>
+      </div>
       <div class="grid three">
         ${categories.map(categoryCard).join("\n")}
       </div>
@@ -366,6 +383,14 @@ function renderGuidesIndex(pages) {
       </div>
     </section>
     <section class="section">
+      <div class="callout">
+        <h2>How to use guides and kits together</h2>
+        <p>Use a guide when you are comparing options or deciding what not to buy. Once you know the problem and the tradeoff, open a kit for a compact, specific recommendation.</p>
+        <div class="internal-links">
+          <a href="${relativeHref("/guides/", "/kits/")}">Browse all kits</a>
+          <a href="${relativeHref("/guides/", "/")}">Return home</a>
+        </div>
+      </div>
       ${renderKitCards(published, "/guides/")}
     </section>
     <section class="band">

@@ -13,6 +13,14 @@ Static affiliate/editorial site for renter-friendly apartment kits.
 - `CONTENT_ROADMAP.md` - editorial roadmap and long-tail backlog.
 - `ARTICLE_CREATION_GUIDE.md` - rules and workflow for creating kit pages.
 
+## How the site is organized
+
+- `/kits/` - practical pages that solve one renter problem with a compact minimum kit, optional upgrades, skip notes, and renter-risk guidance.
+- `/guides/` - buying strategy and comparison pages that explain what to skip, how to compare renter-friendly approaches, and how to think about deposit risk.
+- `/about/`, `/contact/`, `/affiliate-disclosure/`, and `/privacy/` - trust, requests, disclosure, and policy pages.
+
+Start from the home page when you are not sure where to begin. Choose a `kit` when the apartment problem is clear; choose a `guide` when the buying decision or tradeoff is the problem.
+
 ## Build
 
 Run:
