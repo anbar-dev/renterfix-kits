@@ -82,7 +82,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | published | No-drill | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
 | published | Daily fixes | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
 | published | Move-out | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
-| next | No-drill | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
+| published | No-drill | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
 | published | Kitchen | No-Pantry Kitchen Organization Kit | `/kits/kitchen/no-pantry-organization/` | apartment kitchen no pantry; small kitchen pantry alternatives; no pantry storage ideas apartment |
 | next | Daily fixes | Rental Door Security Without Drilling | `/kits/daily-fixes/door-security-no-drill/` | apartment door security without drilling; renter friendly door security; portable door lock apartment |
 
@@ -127,7 +127,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | published | No-Drill Curtains for Renters | `/kits/no-drill/no-drill-curtains/` | how to hang curtains in rental without holes; no drill curtains apartment; tension rod curtains rental |
 | next | No-Drill Bathroom Storage | `/kits/no-drill/bathroom-storage/` | how to add storage to apartment bathroom without drilling; no drill bathroom storage rental; tiny rental bathroom storage |
 | next | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
-| next | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
+| published | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
 | planned | No-Drill Entryway Hooks | `/kits/no-drill/entryway-hooks/` | no drill entryway hooks apartment; renter friendly coat hooks; apartment hooks without holes |
 | planned | No-Drill Shelf Alternatives | `/kits/no-drill/shelf-alternatives/` | shelves for renters without drilling; no drill shelf alternatives; renter friendly storage shelves |
 | planned | Renter-Friendly Balcony Setup | `/kits/no-drill/balcony-setup/` | renter friendly balcony makeover; apartment balcony kit; small balcony setup apartment |

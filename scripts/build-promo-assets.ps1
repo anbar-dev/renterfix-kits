@@ -406,6 +406,40 @@ $Articles = @(
     )
   },
   [pscustomobject]@{
+    Slug = "wall-decor"
+    Category = "No-Drill"
+    Board = "No-Drill Apartment Ideas"
+    Url = "$BaseUrl/kits/no-drill/wall-decor/"
+    Keywords = "hang wall art rental, renter friendly wall decor, no drill wall decor, command strips apartment walls, apartment decor without holes"
+    VideoHook = "Want wall art in a rental? Weigh the frame, inspect the wall, and choose the lightest attachment that works."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "No-Drill Wall Decor for Renters"
+        Subtitle = "A measured, deposit-aware setup for light frames and small decor without drilling first."
+        Bullets = @("Measure the frame", "Check the wall", "Plan removal")
+        Description = "Renter-friendly wall decor without drilling, including picture strips, light hooks, surface warnings, and move-out notes. This page contains Amazon affiliate links. #ad"
+        Bg = "#40543f"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Hang Wall Art Without Holes"
+        Subtitle = "Use removable products only when the frame is light and the wall surface is compatible."
+        Bullets = @("Light frames only", "Smooth walls", "No heavy shelves")
+        Description = "How to hang wall art in a rental without holes, with renter-safe product priorities and what to skip. #ad"
+        Bg = "#d87558"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#466a86"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Do Command Strips Damage Walls?"
+        Subtitle = "They are lower risk than drilling, not damage-proof. Surface, weight, humidity, and removal all matter."
+        Bullets = @("Check paint first", "Respect load limits", "Remove slowly")
+        Description = "Do Command strips damage apartment walls? A practical renter wall decor checklist with surface and move-out warnings. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      }
+    )
+  },
+  [pscustomobject]@{
     Slug = "basic-tool-kit"
     Category = "Move-In"
     Board = "First Apartment Essentials"
