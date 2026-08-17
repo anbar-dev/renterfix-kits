@@ -372,6 +372,40 @@ $Articles = @(
     )
   },
   [pscustomobject]@{
+    Slug = "move-out-cleaning-kit"
+    Category = "Move-Out"
+    Board = "Apartment Cleaning Checklists"
+    Url = "$BaseUrl/kits/move-out/cleaning-kit/"
+    Keywords = "move out cleaning supplies apartment, apartment move out checklist, get security deposit back, renter cleaning kit"
+    VideoHook = "Moving out? Document the apartment first, then clean the high-visibility areas in the right order."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "Move-Out Cleaning Kit"
+        Subtitle = "The focused apartment cleaning checklist for the final week of a rental, without buying a whole janitor closet."
+        Bullets = @("Document first", "Kitchen and bath", "Floors last")
+        Description = "Move-out cleaning supplies apartment renters can use for the final clean, with deposit-aware priorities and what to skip. This page contains Amazon affiliate links. #ad"
+        Bg = "#40543f"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Apartment Move-Out Cleaning Checklist"
+        Subtitle = "Clean empty cabinets, appliances, bathroom fixtures, closets, and floors before the final key handoff."
+        Bullets = @("Photos before cleaning", "Targeted products", "No harsh overkill")
+        Description = "Apartment move-out cleaning checklist for renters who want to clean thoroughly without creating new wall, floor, or fixture damage. #ad"
+        Bg = "#d87558"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#466a86"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Clean Before You Hand Over the Keys"
+        Subtitle = "A simple final-clean sequence that keeps documentation, kitchen grime, bathroom buildup, and floors in order."
+        Bullets = @("Check the lease", "Skip normal wear", "Leave it empty")
+        Description = "What to clean before moving out of an apartment, including product priorities, final inspection notes, and deposit-aware skip advice. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      }
+    )
+  },
+  [pscustomobject]@{
     Slug = "basic-tool-kit"
     Category = "Move-In"
     Board = "First Apartment Essentials"

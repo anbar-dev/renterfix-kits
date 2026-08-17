@@ -344,12 +344,12 @@ Select-String -Path .\docs\sitemap.xml -Pattern 'page-slug'
 - `/kits/small-space/entryway-no-closet/`
 - `/kits/daily-fixes/closet-smell-dampness/`
 - `/kits/daily-fixes/dark-apartment-lighting/`
+- `/kits/move-out/cleaning-kit/`
 
 ## Recommended Next Pages
 
 Good candidates from the roadmap:
 
-- `/kits/move-out/cleaning-kit/`
 - `/kits/no-drill/cable-management/`
 - `/kits/daily-fixes/door-security-no-drill/`
 

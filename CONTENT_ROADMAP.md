@@ -81,7 +81,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | published | Kitchen | Tiny Kitchen Counter-Space Kit | `/kits/kitchen/tiny-counter-space/` | small apartment kitchen no counter space; tiny rental kitchen counter space; kitchen cart for small apartment |
 | published | No-drill | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
 | published | Daily fixes | Closet Smell and Dampness Kit | `/kits/daily-fixes/closet-smell-dampness/` | closet smells musty apartment; damp closet rental; how to fix musty closet smell |
-| next | Move-out | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
+| published | Move-out | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
 | next | No-drill | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
 | published | Kitchen | No-Pantry Kitchen Organization Kit | `/kits/kitchen/no-pantry-organization/` | apartment kitchen no pantry; small kitchen pantry alternatives; no pantry storage ideas apartment |
 | next | Daily fixes | Rental Door Security Without Drilling | `/kits/daily-fixes/door-security-no-drill/` | apartment door security without drilling; renter friendly door security; portable door lock apartment |
@@ -162,7 +162,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
 | next | Move-Out Wall Repair Kit | `/kits/move-out/wall-repair-kit/` | small holes apartment wall repair; move out wall repair kit; fix scuffs apartment wall |
-| next | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
+| published | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
 | planned | Adhesive Residue Removal Kit | `/kits/move-out/adhesive-residue-removal/` | how to remove command strip residue apartment wall; adhesive residue remover painted walls; remove tape residue rental |
 | planned | Carpet Stain Kit for Renters | `/kits/move-out/carpet-stain-kit/` | apartment carpet stain cleaning kit; remove carpet stains before move out; renter carpet stain deposit |
 | planned | Deposit-Safe Final Walkthrough Checklist | `/kits/move-out/final-walkthrough-checklist/` | how to get security deposit back apartment checklist; final walkthrough apartment checklist; move out inspection checklist renter |
