@@ -84,7 +84,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | published | Move-out | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
 | published | No-drill | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
 | published | Kitchen | No-Pantry Kitchen Organization Kit | `/kits/kitchen/no-pantry-organization/` | apartment kitchen no pantry; small kitchen pantry alternatives; no pantry storage ideas apartment |
-| next | Daily fixes | Rental Door Security Without Drilling | `/kits/daily-fixes/door-security-no-drill/` | apartment door security without drilling; renter friendly door security; portable door lock apartment |
+| published | Daily fixes | Rental Door Security Without Drilling | `/kits/daily-fixes/door-security-no-drill/` | apartment door security without drilling; renter friendly door security; portable door lock apartment |
 
 ## Move-In Cluster
 
@@ -155,7 +155,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | planned | Room Too Cold Kit | `/kits/daily-fixes/room-too-cold-kit/` | apartment room too cold what to buy; renter friendly draft stopper; cold apartment bedroom kit |
 | planned | Bad Shower Pressure Basics | `/kits/daily-fixes/shower-pressure-basics/` | apartment shower pressure low; renter shower head replacement; rental shower upgrade |
 | planned | Roach Sighting Move-In Kit | `/kits/daily-fixes/roach-sighting-kit/` | saw roach before moving in apartment; roach prevention apartment kit; apartment pest prevention supplies |
-| next | Rental Door Security Without Drilling | `/kits/daily-fixes/door-security-no-drill/` | apartment door security without drilling; renter friendly door security; portable door lock apartment |
+| published | Rental Door Security Without Drilling | `/kits/daily-fixes/door-security-no-drill/` | apartment door security without drilling; renter friendly door security; portable door lock apartment |
 
 ## Move-Out Cluster
 

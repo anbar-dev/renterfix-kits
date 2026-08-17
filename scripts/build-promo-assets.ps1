@@ -440,6 +440,40 @@ $Articles = @(
     )
   },
   [pscustomobject]@{
+    Slug = "door-security-no-drill"
+    Category = "Daily Fix"
+    Board = "Renter-Friendly Fixes"
+    Url = "$BaseUrl/kits/daily-fixes/door-security-no-drill/"
+    Keywords = "apartment door security, renter friendly door security, portable door lock apartment, no drill door lock, rental door alarm"
+    VideoHook = "Want an extra layer on an apartment door? Check the door swing first and never block your exit."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "Apartment Door Security Without Drilling"
+        Subtitle = "Choose a portable lock or alert device only after checking the door swing, clearance, and exit path."
+        Bullets = @("Check the swing", "Keep exit clear", "Test removal")
+        Description = "Apartment door security without drilling: portable renter-friendly locks, door alarms, compatibility checks, and safety limits. This page contains Amazon affiliate links. #ad"
+        Bg = "#40543f"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Portable Door Lock for Renters"
+        Subtitle = "A no-drill extra layer for compatible inward-opening doors, with fast removal and no security guarantees."
+        Bullets = @("Fit matters", "Inside use", "Maintenance first")
+        Description = "Portable door lock apartment guide for renters, with inward-door compatibility, landlord notes, and what to skip. #ad"
+        Bg = "#d87558"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#466a86"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Never Block the Only Exit"
+        Subtitle = "Door wedges and locks are extra layers, not substitutes for a working primary lock or emergency access."
+        Bullets = @("Report broken locks", "Keep egress clear", "Use alarms carefully")
+        Description = "Renter-friendly door security checklist: portable locks, door alarms, safety boundaries, and when to call maintenance. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      }
+    )
+  },
+  [pscustomobject]@{
     Slug = "basic-tool-kit"
     Category = "Move-In"
     Board = "First Apartment Essentials"

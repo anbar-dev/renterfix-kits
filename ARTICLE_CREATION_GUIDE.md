@@ -347,12 +347,12 @@ Select-String -Path .\docs\sitemap.xml -Pattern 'page-slug'
 - `/kits/move-out/cleaning-kit/`
 - `/kits/no-drill/cable-management/`
 - `/kits/no-drill/wall-decor/`
+- `/kits/daily-fixes/door-security-no-drill/`
 
 ## Recommended Next Pages
 
 Good candidates from the roadmap:
 
-- `/kits/daily-fixes/door-security-no-drill/`
 
 ## Publishing
 
