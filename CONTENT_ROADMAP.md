@@ -125,7 +125,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
 | published | No-Drill Curtains for Renters | `/kits/no-drill/no-drill-curtains/` | how to hang curtains in rental without holes; no drill curtains apartment; tension rod curtains rental |
-| next | No-Drill Bathroom Storage | `/kits/no-drill/bathroom-storage/` | how to add storage to apartment bathroom without drilling; no drill bathroom storage rental; tiny rental bathroom storage |
+| published | No-Drill Bathroom Storage | `/kits/no-drill/bathroom-storage/` | how to add storage to apartment bathroom without drilling; no drill bathroom storage rental; tiny rental bathroom storage |
 | next | No-Drill Cable Management Kit | `/kits/no-drill/cable-management/` | cable management for renters; hide cords apartment without drilling; renter friendly cable raceway |
 | published | No-Drill Wall Decor Kit | `/kits/no-drill/wall-decor/` | hang wall art in rental without holes; renter friendly wall decor; command strips damage apartment walls |
 | planned | No-Drill Entryway Hooks | `/kits/no-drill/entryway-hooks/` | no drill entryway hooks apartment; renter friendly coat hooks; apartment hooks without holes |

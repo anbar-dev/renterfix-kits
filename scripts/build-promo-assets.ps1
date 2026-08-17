@@ -474,6 +474,40 @@ $Articles = @(
     )
   },
   [pscustomobject]@{
+    Slug = "bathroom-storage"
+    Category = "No-Drill"
+    Board = "No-Drill Apartment Ideas"
+    Url = "$BaseUrl/kits/no-drill/bathroom-storage/"
+    Keywords = "no drill bathroom storage rental, apartment bathroom storage without drilling, tiny rental bathroom storage, renter bathroom organizer"
+    VideoHook = "Need more bathroom storage in a rental? Measure the door and shower area before buying anything."
+    Pins = @(
+      [pscustomobject]@{
+        File = "pin-01.png"
+        Title = "No-Drill Bathroom Storage"
+        Subtitle = "A renter-friendly way to get bottles, towels, razors, and clutter off the floor without drilling tile."
+        Bullets = @("Measure first", "Keep loads light", "Let items dry")
+        Description = "No-drill bathroom storage for small rental bathrooms, with caddies, hooks, moisture notes, and what to skip. This page contains Amazon affiliate links. #ad"
+        Bg = "#40543f"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#efb857"
+      },
+      [pscustomobject]@{
+        File = "pin-02.png"
+        Title = "Tiny Rental Bathroom Storage"
+        Subtitle = "Use the door, shower area, and one light hook before committing to adhesive shelves."
+        Bullets = @("Door space", "Outside splash zone", "No giant bins")
+        Description = "Tiny rental bathroom storage ideas that start with door space, light hooks, and small freestanding organizers. #ad"
+        Bg = "#d87558"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#466a86"
+      },
+      [pscustomobject]@{
+        File = "pin-03.png"
+        Title = "Do Not Overload Shower Storage"
+        Subtitle = "Humidity, bottles, door clearance, and removal matter more than the product photo."
+        Bullets = @("Check clearance", "Keep drains open", "Test removal")
+        Description = "Renter bathroom storage checklist: check clearance, keep drains and vents open, and plan removal before installing. #ad"
+        Bg = "#466a86"; Panel = "#fbfaf6"; Ink = "#20231f"; Muted = "#62685f"; Accent = "#d87558"
+      }
+    )
+  },
+  [pscustomobject]@{
     Slug = "basic-tool-kit"
     Category = "Move-In"
     Board = "First Apartment Essentials"

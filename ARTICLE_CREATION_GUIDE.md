@@ -348,11 +348,14 @@ Select-String -Path .\docs\sitemap.xml -Pattern 'page-slug'
 - `/kits/no-drill/cable-management/`
 - `/kits/no-drill/wall-decor/`
 - `/kits/daily-fixes/door-security-no-drill/`
+- `/kits/no-drill/bathroom-storage/`
 
 ## Recommended Next Pages
 
 Good candidates from the roadmap:
 
+- `/kits/kitchen/no-dishwasher-kit/`
+- `/kits/small-space/no-closet-bedroom-storage/`
 
 ## Publishing
 
