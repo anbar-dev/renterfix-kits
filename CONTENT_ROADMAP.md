@@ -161,7 +161,7 @@ These are the first pages to create because they are broad enough to monetize, s
 
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
-| next | Move-Out Wall Repair Kit | `/kits/move-out/wall-repair-kit/` | small holes apartment wall repair; move out wall repair kit; fix scuffs apartment wall |
+| published | Move-Out Wall Repair Kit | `/kits/move-out/wall-repair-kit/` | small holes apartment wall repair; move out wall repair kit; fix scuffs apartment wall |
 | published | Move-Out Cleaning Kit | `/kits/move-out/cleaning-kit/` | move out cleaning supplies apartment; apartment move out cleaning checklist; cleaning products to get deposit back |
 | planned | Adhesive Residue Removal Kit | `/kits/move-out/adhesive-residue-removal/` | how to remove command strip residue apartment wall; adhesive residue remover painted walls; remove tape residue rental |
 | planned | Carpet Stain Kit for Renters | `/kits/move-out/carpet-stain-kit/` | apartment carpet stain cleaning kit; remove carpet stains before move out; renter carpet stain deposit |
