@@ -137,7 +137,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | Status | Page title | Suggested URL | Long-tail targets |
 | --- | --- | --- | --- |
 | published | Entryway Without a Closet Kit | `/kits/small-space/entryway-no-closet/` | apartment entryway no closet; no closet entryway storage; small apartment entryway storage renter friendly |
-| planned | No-Closet Bedroom Storage Kit | `/kits/small-space/no-closet-bedroom-storage/` | bedroom no closet storage apartment; no closet bedroom ideas rental; freestanding wardrobe apartment |
+| published | No-Closet Bedroom Storage Kit | `/kits/small-space/no-closet-bedroom-storage/` | bedroom no closet storage apartment; no closet bedroom ideas rental; freestanding wardrobe apartment |
 | planned | Under-Bed Storage Kit | `/kits/small-space/under-bed-storage/` | under bed storage for small apartment; renter under bed storage; small bedroom storage kit |
 | planned | Studio Apartment Storage Kit | `/kits/small-space/studio-storage-kit/` | studio apartment storage ideas; small studio apartment organization; storage kit for studio apartment |
 | next | Tiny Bathroom Storage | `/kits/small-space/tiny-bathroom-storage/` | tiny apartment bathroom storage; small rental bathroom no storage; no drill bathroom storage |
