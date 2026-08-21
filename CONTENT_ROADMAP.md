@@ -106,7 +106,7 @@ These are the first pages to create because they are broad enough to monetize, s
 | planned | Kitchen Kit for Renters Who Cook Daily | `/kits/kitchen/cook-daily-kit/` | apartment kitchen essentials for cooking daily; small kitchen cooking essentials; first apartment cooking kit |
 | next | Tiny Kitchen Counter-Space Kit | `/kits/kitchen/tiny-counter-space/` | small apartment kitchen no counter space; tiny rental kitchen counter space; kitchen cart for small apartment |
 | published | No-Pantry Kitchen Organization Kit | `/kits/kitchen/no-pantry-organization/` | apartment kitchen no pantry; small kitchen pantry alternatives; no pantry storage ideas apartment |
-| planned | No-Dishwasher Kitchen Survival Kit | `/kits/kitchen/no-dishwasher-kit/` | apartment no dishwasher what to buy; dish drying rack small kitchen; no dishwasher apartment essentials |
+| published | No-Dishwasher Kitchen Survival Kit | `/kits/kitchen/no-dishwasher-kit/` | apartment no dishwasher what to buy; dish drying rack small kitchen; no dishwasher apartment essentials |
 | planned | Rental Kitchen Upgrade Without Contact Paper | `/kits/kitchen/no-contact-paper-upgrade/` | renter friendly kitchen upgrade no contact paper; how to make rental kitchen look better no damage; peel and stick contact paper rental risk |
 
 ## Cleaning Cluster
