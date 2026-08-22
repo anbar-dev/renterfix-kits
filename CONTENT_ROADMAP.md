@@ -179,7 +179,8 @@ These pages may not monetize as directly, but they build trust and internal link
 | published | How Deposit Risk Scores Work | `/guides/deposit-risk-score/` | renter friendly damage risk; deposit safe apartment products; how to avoid losing security deposit |
 | published | Renter-Friendly Does Not Always Mean Damage-Free | `/guides/renter-friendly-not-damage-free/` | renter friendly products damage walls; peel and stick rental damage; adhesive shelves rental risk |
 | published | The Apartment Survival Kits Method: Buy Only What Your Rental Needs | `/guides/apartment-survival-kits-method/` | first apartment buying strategy; what to buy for a rental apartment; minimal renter apartment setup |
-| planned | How to Test a Renter-Friendly Product Before Installing It | `/guides/test-renter-friendly-product/` | how to test renter friendly products; removable products apartment wall test; rental product damage checklist |
+| published | How to Test a Renter-Friendly Product Before Installing It | `/guides/test-renter-friendly-product/` | how to test renter friendly products; removable products apartment wall test; rental product damage checklist |
+| planned | Room-by-Room Rental Setup Checklist | `/guides/room-by-room-rental-setup/` | rental apartment setup checklist; room by room first apartment checklist; renter setup guide |
 | published | Minimal First Apartment Buying Strategy | `/guides/minimal-first-apartment-buying-strategy/` | what to buy first apartment first; first apartment essentials priority; first apartment budget buying guide |
 
 ## Content Selection Rules

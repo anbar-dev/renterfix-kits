@@ -112,7 +112,7 @@ const categories = [
 ];
 
 const guidePlans = [
-  "How to test a renter-friendly product before installing it",
+  "Room-by-room rental setup checklist",
 ];
 
 function escapeHtml(value) {
