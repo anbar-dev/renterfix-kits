@@ -112,7 +112,7 @@ const categories = [
 ];
 
 const guidePlans = [
-  "Renter-friendly is not damage-free",
+  "How to test a renter-friendly product before installing it",
 ];
 
 function escapeHtml(value) {
