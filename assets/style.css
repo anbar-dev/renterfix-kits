@@ -594,6 +594,12 @@ h1 {
   resize: vertical;
 }
 
+.form-help {
+  margin: -4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
@@ -739,6 +745,14 @@ h1 {
 .callout h2,
 .callout h3 {
   margin-top: 0;
+}
+
+.site-bridge {
+  margin-top: 28px;
+}
+
+.library-section-title {
+  margin-top: 42px;
 }
 
 .amazon-widget {
@@ -903,6 +917,7 @@ h1 {
 
   .sidebar {
     position: static;
+    order: -1;
   }
 
   .trust-strip div {

@@ -189,14 +189,13 @@ function renderHeader(root) {
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="${root}"><img class="brand-logo" src="${root}assets/brand/favicon-192.png" alt="" width="34" height="34"><span>${site.name}</span></a>
-      <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">=</button>
-      <div class="nav-links" data-nav-links>
+      <button class="menu-button" data-menu-button aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">=</button>
+      <div class="nav-links" id="site-nav" data-nav-links>
         <a href="${root}">Home</a>
         <a href="${root}kits/">Kits</a>
         <a href="${root}guides/">Guides</a>
         <a href="${root}about/">About</a>
         <a href="${root}contact/">Contact</a>
-        <a href="${root}affiliate-disclosure/">Disclosure</a>
       </div>
     </nav>
   </header>`;
@@ -355,21 +354,29 @@ function renderCategoryPage(category, pages) {
 }
 
 function renderKitsIndex(pages) {
+  const published = pages.filter((page) => page.meta.type === "kit");
   const body = `
     <section class="page-hero">
       <div class="page-title">
-        <p class="eyebrow">Content map</p>
-        <h1>Renter kit categories.</h1>
-        <p>The site is organized around problems renters actually search for: move-in, kitchen, cleaning, no-drill fixes, small-space systems, daily annoyances, and move-out.</p>
+        <p class="eyebrow">Kit library</p>
+        <h1>Find the smallest useful kit.</h1>
+        <p>Start with a renter problem, choose a category if you need context, or open a finished kit directly when you already know what needs fixing.</p>
       </div>
     </section>
     <section class="section">
       <div class="callout">
-        <h2>How to use the library</h2>
-        <p><strong>Kits</strong> are practical pages for one apartment problem, such as a dark room, no pantry, or move-in day. <strong>Guides</strong> help you choose between approaches, understand renter risk, and decide what to skip before you buy.</p>
+        <h2>Choose your shortest route</h2>
+        <p>Use a category when you want to compare related problems. Use a finished kit when you want a compact recommendation for one specific apartment constraint.</p>
         <div class="internal-links">
           <a href="${relativeHref("/kits/", "/guides/")}">Browse guides</a>
           <a href="${relativeHref("/kits/", "/")}">Return home</a>
+        </div>
+      </div>
+      <div class="section-title library-section-title">
+        <div>
+          <p class="eyebrow">Browse by problem</p>
+          <h2>Seven renter problem clusters.</h2>
+          <p>Use a category when you are not sure which kit fits yet.</p>
         </div>
       </div>
       <div class="grid three">
@@ -377,13 +384,25 @@ function renderKitsIndex(pages) {
       </div>
     </section>`;
 
+  const publishedSection = `
+    <section class="section compact">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">All published kits</p>
+          <h2>Go straight to a specific fix.</h2>
+          <p>These are the finished pages available now. Each one starts with the minimum useful setup, then explains what to skip and what could create renter risk.</p>
+        </div>
+      </div>
+      ${renderKitCards(published, "/kits/")}
+    </section>`;
+
   return {
     urlPath: "/kits/",
     html: renderPage({
-      title: `Apartment Kit Categories | ${site.name}`,
-      description: "Browse renter-friendly kit categories for move-in, kitchen, cleaning, no-drill fixes, small spaces, daily problems, and move-out.",
+      title: `Apartment Kit Library | ${site.name}`,
+      description: "Browse finished renter-friendly apartment kits and categories for move-in, kitchens, cleaning, no-drill fixes, small spaces, daily problems, and move-out.",
       urlPath: "/kits/",
-      body
+      body: body + publishedSection
     })
   };
 }

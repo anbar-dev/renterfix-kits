@@ -13,7 +13,7 @@ type: page
     </section>
     <section class="section">
       <div class="contact-layout">
-        <form class="contact-form card" data-static-form>
+        <form class="contact-form card" data-mailto-form data-contact-email="hello@apartmentsurvivalkits.com">
           <div>
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
@@ -37,8 +37,9 @@ type: page
             <label for="message">What should the kit solve?</label>
             <textarea id="message" name="message" rows="7" placeholder="Example: My rental bathroom has no storage and I cannot drill into tile."></textarea>
           </div>
-          <button class="button" type="submit">Send request</button>
-          <p class="form-note" data-form-message hidden>Thanks. This request has been added to the topic list.</p>
+          <button class="button" type="submit">Prepare email request</button>
+          <p class="form-note" data-form-message hidden>Your email app should open with the request ready to send. Nothing is stored on this site.</p>
+          <p class="form-help">This static site does not save submissions. The button prepares an email in your own mail app; you choose whether to send it.</p>
         </form>
         <aside class="contact-aside">
           <div class="content-block">

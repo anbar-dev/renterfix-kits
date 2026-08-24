@@ -15,9 +15,9 @@ type: page
         <h1>Buy only what your rental actually needs.</h1>
         <p class="hero-copy">A practical catalog of minimal kits for move-in, small kitchens, no-drill fixes, daily apartment annoyances, and move-out deposit prep. Each kit focuses on what to buy, what to skip, and what could put your security deposit at risk.</p>
         <div class="hero-actions">
+          <a class="button" href="#finder">Find my kit</a>
           <a class="button secondary" href="#categories">Browse categories</a>
-          <a class="button" href="kits/">View all kits</a>
-          <a class="button light" href="guides/">Read guides</a>
+          <a class="button light" href="guides/">Read buying guides</a>
         </div>
       </div>
     </section>
@@ -35,6 +35,28 @@ type: page
         <div>
           <strong>Skip notes</strong>
           <span>Every good kit says what not to buy.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact" id="finder">
+      <div class="finder card">
+        <div class="finder-panel">
+          <p class="eyebrow">Find your shortest route</p>
+          <h2>What problem are you trying to solve?</h2>
+          <p>Pick the closest constraint and jump straight to the right category.</p>
+          <div class="choice-grid" aria-label="Apartment problem choices">
+            <button class="choice active" type="button" data-choice="storage"><strong>No storage</strong><span>Closets, entryways, kitchens, bathrooms.</span></button>
+            <button class="choice" type="button" data-choice="lighting"><strong>Bad lighting</strong><span>No ceiling fixture or gloomy rooms.</span></button>
+            <button class="choice" type="button" data-choice="privacy"><strong>No drilling</strong><span>Curtains, walls, hooks, cable fixes.</span></button>
+            <button class="choice" type="button" data-choice="moveout"><strong>Move-out risk</strong><span>Cleaning, residue, wall repair, deposits.</span></button>
+          </div>
+        </div>
+        <div class="result-box">
+          <p class="eyebrow">Suggested path</p>
+          <h2 data-result-title>Start with the small-space category.</h2>
+          <p data-result-copy>The strongest pages here cover no-closet entryways, tiny bathrooms, under-bed storage, and small kitchens.</p>
+          <a class="button secondary" data-result-link href="kits/small-space/">Open suggested category</a>
         </div>
       </div>
     </section>
@@ -130,52 +152,6 @@ type: page
       </div>
     </section>
 
-    <section class="section compact" id="library">
-      <div class="section-title">
-        <div>
-          <p class="eyebrow">How to use the site</p>
-          <h2>Choose a kit or a guide.</h2>
-          <p>The library has two complementary types of pages. Start with a kit when you have a concrete apartment problem; start with a guide when you need help comparing options or deciding what to skip.</p>
-        </div>
-      </div>
-      <div class="grid two">
-        <article class="card content-block">
-          <div class="pill-row"><span class="pill">Kits</span></div>
-          <h3>Solve one renter problem.</h3>
-          <p>Kits give you a minimum setup, optional upgrades, product reasoning, renter-risk notes, and move-out considerations for a specific situation.</p>
-          <a class="button" href="kits/">Browse kits</a>
-        </article>
-        <article class="card content-block">
-          <div class="pill-row"><span class="pill">Guides</span></div>
-          <h3>Make a better buying decision.</h3>
-          <p>Guides cover what to skip, how deposit-risk scores work, and the tradeoffs between renter-friendly approaches before you buy.</p>
-          <a class="button secondary" href="guides/">Browse guides</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section compact">
-      <div class="finder card">
-        <div class="finder-panel">
-          <p class="eyebrow">Quick picker</p>
-          <h2>What problem are you trying to solve?</h2>
-          <p>Pick the closest constraint and jump into the right part of the site.</p>
-          <div class="choice-grid" aria-label="Apartment problem choices">
-            <button class="choice active" type="button" data-choice="storage"><strong>No storage</strong><span>Closets, entryways, kitchens, bathrooms.</span></button>
-            <button class="choice" type="button" data-choice="lighting"><strong>Bad lighting</strong><span>No ceiling fixture or gloomy rooms.</span></button>
-            <button class="choice" type="button" data-choice="privacy"><strong>No drilling</strong><span>Curtains, walls, hooks, cable fixes.</span></button>
-            <button class="choice" type="button" data-choice="moveout"><strong>Move-out risk</strong><span>Cleaning, residue, wall repair, deposits.</span></button>
-          </div>
-        </div>
-        <div class="result-box">
-          <p class="eyebrow">Suggested path</p>
-          <h2 data-result-title>Start with the small-space category.</h2>
-          <p data-result-copy>The strongest pages here cover no-closet entryways, tiny bathrooms, under-bed storage, and small kitchens.</p>
-          <a class="button secondary" data-result-link href="kits/small-space/">Open suggested category</a>
-        </div>
-      </div>
-    </section>
-
     <section class="band">
       <div class="section">
         <div class="section-title">
@@ -198,6 +174,11 @@ type: page
             <h3>Protect the deposit</h3>
             <p>Renter-safe does not always mean damage-free, so install effort and cleanup risk are part of the recommendation.</p>
           </article>
+        </div>
+        <div class="callout site-bridge">
+          <h3>Need help deciding what to buy?</h3>
+          <p>Use a guide when you are comparing approaches or deciding what to skip before opening a kit.</p>
+          <a class="button light" href="guides/">Browse buying guides</a>
         </div>
         <div class="actions">
           <a class="button" href="about/">How the site works</a>

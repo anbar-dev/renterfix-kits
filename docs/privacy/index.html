@@ -23,14 +23,13 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="../"><img class="brand-logo" src="../assets/brand/favicon-192.png" alt="" width="34" height="34"><span>Apartment Survival Kits</span></a>
-      <button class="menu-button" data-menu-button aria-expanded="false" aria-label="Open menu">=</button>
-      <div class="nav-links" data-nav-links>
+      <button class="menu-button" data-menu-button aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">=</button>
+      <div class="nav-links" id="site-nav" data-nav-links>
         <a href="../">Home</a>
         <a href="../kits/">Kits</a>
         <a href="../guides/">Guides</a>
         <a href="../about/">About</a>
         <a href="../contact/">Contact</a>
-        <a href="../affiliate-disclosure/">Disclosure</a>
       </div>
     </nav>
   </header>
@@ -45,7 +44,8 @@
     <section class="section">
       <div class="content-block">
         <h2>Current setup</h2>
-        <p>This version does not include accounts, forms, comments, or a backend database. If analytics, advertising pixels, or newsletter forms are added later, this page should be updated before publishing those tools.</p>
+        <p>This version does not include accounts, comments, or a backend database. The contact page does not save submissions: it prepares an email in your own mail app, and nothing is sent until you choose to send it.</p>
+        <p>If analytics, advertising pixels, or newsletter forms are added later, this page should be updated before publishing those tools.</p>
         <h2>Affiliate links</h2>
         <p>When you click an Amazon link, Amazon may receive information about that visit according to Amazon's own policies.</p>
       </div>
