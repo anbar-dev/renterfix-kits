@@ -112,7 +112,8 @@ const categories = [
 ];
 
 const guidePlans = [
-  "Room-by-room rental setup checklist",
+  "Adhesive Residue Removal Kit",
+  "Deposit-Safe Final Walkthrough Checklist",
 ];
 
 function escapeHtml(value) {
