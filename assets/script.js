@@ -9,50 +9,38 @@ if (menuButton && navLinks) {
   });
 }
 
-const choices = document.querySelectorAll("[data-choice]");
-const resultTitle = document.querySelector("[data-result-title]");
-const resultCopy = document.querySelector("[data-result-copy]");
-const resultLink = document.querySelector("[data-result-link]");
+const problemSearch = document.querySelector("[data-problem-search]");
+const problemLinks = [...document.querySelectorAll("[data-problem]")];
+const problemMore = document.querySelector("[data-problem-more]");
+const problemEmpty = document.querySelector("[data-problem-empty]");
 
-const finderResults = {
-  storage: {
-    title: "Start with the small-space category.",
-    copy: "The strongest pages here will cover no-closet entryways, tiny bathrooms, under-bed storage, and small kitchens.",
-    href: "kits/small-space/",
-    link: "Open small-space kits"
-  },
-  lighting: {
-    title: "Start with the dark apartment lighting kit.",
-    copy: "Use a bright ambient lamp first, then add task lighting and controlled cords without drilling or hardwiring.",
-    href: "kits/daily-fixes/dark-apartment-lighting/",
-    link: "Open lighting kit"
-  },
-  privacy: {
-    title: "Use the no-drill category.",
-    copy: "This is where curtain, wall decor, cable management, shelves, and entry hook pages will live.",
-    href: "kits/no-drill/",
-    link: "Open no-drill kits"
-  },
-  moveout: {
-    title: "Start with the move-out category.",
-    copy: "Future pages will cover cleaning, adhesive residue, carpet stains, wall repair, and final walkthrough prep.",
-    href: "kits/move-out/",
-    link: "Open move-out kits"
-  }
-};
+if (problemSearch && problemLinks.length && problemMore && problemEmpty) {
+  let showAll = false;
 
-choices.forEach((choice) => {
-  choice.addEventListener("click", () => {
-    choices.forEach((item) => item.classList.remove("active"));
-    choice.classList.add("active");
-    const result = finderResults[choice.dataset.choice];
-    if (!result) return;
-    resultTitle.textContent = result.title;
-    resultCopy.textContent = result.copy;
-    resultLink.href = result.href;
-    resultLink.textContent = result.link;
+  const updateProblems = () => {
+    const query = problemSearch.value.trim().toLocaleLowerCase();
+    let visibleCount = 0;
+
+    problemLinks.forEach((link) => {
+      const words = `${link.textContent} ${link.dataset.search || ""}`.toLocaleLowerCase();
+      const visible = query ? words.includes(query) : showAll || link.hasAttribute("data-featured");
+      link.hidden = !visible;
+      if (visible) visibleCount += 1;
+    });
+
+    problemEmpty.hidden = visibleCount !== 0;
+    problemMore.hidden = Boolean(query);
+    problemMore.textContent = showAll ? "Show fewer problems" : `See all ${problemLinks.length} problems`;
+    problemMore.setAttribute("aria-expanded", String(showAll));
+  };
+
+  problemSearch.addEventListener("input", updateProblems);
+  problemMore.addEventListener("click", () => {
+    showAll = !showAll;
+    updateProblems();
   });
-});
+  updateProblems();
+}
 
 document.querySelectorAll('a[href*="amazon.com"]').forEach((link) => {
   link.rel = "sponsored nofollow noopener";
